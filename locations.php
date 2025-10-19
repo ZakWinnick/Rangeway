@@ -9,7 +9,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Our Locations</h1>
-            <p>Starting with the Baker Basecamp - the hub for our regional network in the Mojave and Death Valley corridor</p>
+            <p>Starting with our Baker Basecamp - the hub for our regional network in the Mojave and Death Valley corridor</p>
         </div>
     </section>
 
