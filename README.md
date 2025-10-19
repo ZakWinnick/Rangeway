@@ -153,4 +153,4 @@ No license file present yet. If you intend to reuse code or assets, please open 
 
 **Rangeway Energy** — [rangeway.energy](https://rangeway.energy)  
 General inquiries: hello@rangeway.energy  
-Media/partner inquiries: zak@rangeway.energy
+Media/partner inquiries: partners@rangeway.energy
