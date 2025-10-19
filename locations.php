@@ -161,7 +161,7 @@
                             <h3>Regional Basecamps</h3>
                         </div>
                         <p>
-                            Full-service destinations with staffed operations, premium café, and 3,000 sq ft climate-controlled lounge.
+                            Full-service destinations with staffed operations, a premium café, and 3,000 square feet of climate-controlled lounge space.
                             The complete road trip experience.
                         </p>
                         <div class="network-stats-grid">
