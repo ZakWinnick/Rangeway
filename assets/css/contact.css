@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                      url('images/waystation-exterior2-jt.jpg');
+                      url('https://rangeway.energy/images/waystation-exterior2-jt.jpg');
     background-position: center 30%;
     background-size: cover;
     background-repeat: no-repeat;
