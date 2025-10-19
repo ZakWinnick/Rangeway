@@ -158,7 +158,7 @@
                     <div class="network-card-content">
                         <div class="network-card-header">
                             <span>🏕️</span>
-                            <h3>Baker Basecamp</h3>
+                            <h3>Regional Basecamp</h3>
                         </div>
                         <p>
                             Full-service destination with staffed operations, premium café, and 3,000 sq ft climate-controlled lounge.
@@ -190,7 +190,7 @@
                     <div class="network-card-content">
                         <div class="network-card-header">
                             <span>📍</span>
-                            <h3>Regional Waystations</h3>
+                            <h3>Waystations</h3>
                         </div>
                         <p>
                             Automated locations with climate-controlled lounges and ultra-fast charging.
