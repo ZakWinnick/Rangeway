@@ -158,7 +158,7 @@
                     <div class="network-card-content">
                         <div class="network-card-header">
                             <span>🏕️</span>
-                            <h3>Regional Basecamps</h3>
+                            <h3>Basecamps</h3>
                         </div>
                         <p>
                             Full-service destinations with staffed operations, a premium café, and 3,000 square feet of climate-controlled lounge space.
