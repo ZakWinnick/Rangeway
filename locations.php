@@ -9,7 +9,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Our Locations</h1>
-            <p>Starting with Baker Basecamp—the hub for our regional network in the Mojave and Death Valley corridor</p>
+            <p>Starting with the Baker Basecamp - the hub for our regional network in the Mojave and Death Valley corridor</p>
         </div>
     </section>
 
@@ -19,7 +19,7 @@
                 <div class="location-info">
                     <span class="status">🔨 Under Development</span>
                     <h2>Baker, California</h2>
-                    <p>Our flagship regional hub anchors one of America's most iconic scenic corridors. Located at the gateway to Death Valley National Park, which welcomes over 1.1 million visitors annually, Baker Basecamp provides 24/7 support for travelers exploring the Mojave Desert and Death Valley.</p>
+                    <p>Our flagship regional hub anchors one of America's most iconic scenic corridors. Located at the gateway to Death Valley National Park, which welcomes over 1.1 million visitors annually, the Baker Basecamp provides 24/7 support for travelers exploring the Mojave Desert and Death Valley.</p>
                     <p>This full-service location features ultra-fast charging, a premium café with local partners, and climate-controlled indoor lounges designed for the journey.</p>
 
                     <div class="quick-stats">
@@ -147,7 +147,7 @@
 
             <div style="max-width: 900px; margin: 0 auto 4rem auto; text-align: center;">
                 <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8;">
-                    Baker Basecamp will anchor our regional network, providing full-service hospitality.
+                   The Baker Basecamp will anchor our regional network, providing full-service hospitality.
                     Surrounding Waystations offer the same indoor comfort in a streamlined, automated format—perfect for quick charging stops.
                 </p>
             </div>
