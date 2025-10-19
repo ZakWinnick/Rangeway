@@ -1,0 +1,148 @@
+/* Team Page Specific Styles */
+
+/* === HERO === */
+.hero {
+    margin-top: 82px;
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                      url('images/waystation-exterior-pch.jpg');
+    background-position: center 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--golden-highway);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* === TEAM GRID === */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.team-card {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(240, 144, 96, 0.2);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--sunset-coral), var(--golden-highway));
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    color: var(--golden-highway);
+    margin-bottom: 0.5rem;
+}
+
+.team-card .title {
+    font-size: 1rem;
+    color: var(--fog-gray);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.team-card p {
+    color: var(--fog-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.team-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.team-links a {
+    color: var(--coastal-cream);
+    font-size: 1.3rem;
+    transition: all 0.3s;
+}
+
+.team-links a:hover {
+    color: var(--golden-highway);
+    transform: translateY(-2px);
+}
+
+/* === JOIN TEAM === */
+.join-team {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px dashed rgba(240, 144, 96, 0.3);
+    margin-top: 3rem;
+}
+
+.join-team h3 {
+    font-size: 2rem;
+    color: var(--golden-highway);
+    margin-bottom: 1rem;
+}
+
+.join-team p {
+    font-size: 1.2rem;
+    color: var(--fog-gray);
+    margin-bottom: 2rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        min-height: 40vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

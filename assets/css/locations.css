@@ -1,0 +1,320 @@
+/* Locations Page Specific Styles */
+
+/* === HERO === */
+.hero {
+    margin-top: 82px;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                      url('https://rangeway.energy/images/baker-exterior1.jpg');
+    background-position: center 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--golden-highway);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* === LOCATION HERO === */
+.location-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.location-info h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--golden-highway), var(--sunset-coral));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.location-info .status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(240, 144, 96, 0.2);
+    border: 1px solid var(--sunset-coral);
+    border-radius: 8px;
+    color: var(--sunset-coral);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.location-info p {
+    font-size: 1.2rem;
+    color: var(--fog-gray);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat-badge {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-badge .number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--golden-highway);
+    display: block;
+}
+
+.stat-badge .label {
+    font-size: 0.9rem;
+    color: var(--fog-gray);
+}
+
+.map-placeholder {
+    height: 500px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.map-placeholder .icon {
+    font-size: 4rem;
+}
+
+.map-placeholder p {
+    color: var(--fog-gray);
+    font-size: 1.1rem;
+}
+
+/* === FEATURES SHOWCASE === */
+.features-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-box {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+.feature-box:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(240, 144, 96, 0.2);
+}
+
+.feature-box .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-box h4 {
+    font-size: 1.2rem;
+    color: var(--golden-highway);
+    margin-bottom: 0.5rem;
+}
+
+.feature-box p {
+    color: var(--fog-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* === AMENITIES GRID === */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.amenity-item {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.amenity-item .icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.amenity-item p {
+    color: var(--coastal-cream);
+    font-weight: 500;
+}
+
+/* === NETWORK CARDS === */
+.network-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.network-location-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 179, 102, 0.3);
+}
+
+.network-location-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.network-card-content {
+    padding: 2rem;
+}
+
+.network-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.network-card-header span {
+    font-size: 2.5rem;
+}
+
+.network-card-header h3 {
+    font-size: 1.8rem;
+    color: var(--golden-highway);
+    margin: 0;
+}
+
+.network-card-content > p {
+    color: var(--fog-gray);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.network-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.network-stat-item {
+    padding: 0.8rem;
+    background: rgba(255, 179, 102, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.network-stat-item .value {
+    color: var(--golden-highway);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.network-stat-item .label {
+    color: var(--fog-gray);
+    font-size: 0.85rem;
+}
+
+.network-comfort-box {
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background: rgba(240, 144, 96, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(240, 144, 96, 0.2);
+    text-align: center;
+}
+
+.network-comfort-box h4 {
+    color: var(--golden-highway);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.network-comfort-box p {
+    font-size: 1.1rem;
+    color: var(--fog-gray);
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        min-height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .location-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .features-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .network-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-placeholder {
+        height: 300px;
+    }
+}

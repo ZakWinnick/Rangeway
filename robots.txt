@@ -1,0 +1,13 @@
+# Rangeway Energy - robots.txt
+# https://rangeway.energy/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas
+Disallow: /config.php
+Disallow: /contact-handler.php
+Disallow: /assets/
+
+# Sitemap
+Sitemap: https://rangeway.energy/sitemap.xml

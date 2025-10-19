@@ -1,0 +1,307 @@
+/* Home Page Specific Styles */
+
+/* === HERO SECTION === */
+.hero {
+    margin-top: 82px;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                      url('https://rangeway.energy/images/waystation-exterior1-az.jpg');
+    background-position: center 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero .tagline {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--golden-highway);
+    font-weight: 300;
+    font-style: italic;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* === FEATURES GRID === */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature-card {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(240, 144, 96, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--golden-highway);
+}
+
+.feature-card p {
+    color: var(--fog-gray);
+    line-height: 1.8;
+}
+
+/* === LOCATION SHOWCASE === */
+.location-showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('') center/cover;
+    background-attachment: fixed;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.location-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.location-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--coastal-cream);
+    line-height: 1.8;
+}
+
+.location-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--golden-highway), var(--sunset-coral));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+}
+
+.stat-label {
+    color: var(--fog-gray);
+    font-size: 0.9rem;
+}
+
+/* === NETWORK TYPES === */
+.network-types-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.network-type-card {
+    padding: 3rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 179, 102, 0.3);
+}
+
+.network-type-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.network-type-card h3 {
+    font-size: 2rem;
+    color: var(--golden-highway);
+    margin-bottom: 1rem;
+}
+
+.network-type-card > p {
+    font-size: 1.1rem;
+    color: var(--fog-gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.network-features {
+    display: grid;
+    gap: 1rem;
+}
+
+.network-feature-item {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.network-feature-item .emoji {
+    color: var(--sunset-coral);
+    font-size: 1.3rem;
+}
+
+.network-feature-item strong {
+    color: var(--coastal-cream);
+    display: block;
+}
+
+.network-feature-item span {
+    color: var(--fog-gray);
+    font-size: 0.95rem;
+}
+
+.comfort-guarantee {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(240, 144, 96, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(240, 144, 96, 0.2);
+}
+
+.comfort-guarantee p:first-of-type {
+    font-size: 1.3rem;
+    color: var(--coastal-cream);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.comfort-guarantee p:last-of-type {
+    font-size: 1.05rem;
+    color: var(--fog-gray);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* === CTA SECTION === */
+.cta-section {
+    background: linear-gradient(135deg, var(--sunset-coral), var(--golden-highway));
+    color: var(--mountain-charcoal);
+}
+
+.cta-section h2 {
+    color: var(--mountain-charcoal);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: var(--mountain-charcoal) !important;
+    background-clip: unset !important;
+}
+
+.cta-section p {
+    color: var(--ocean-deep);
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.cta-btn {
+    color: var(--mountain-charcoal);
+    border-color: var(--mountain-charcoal);
+    margin: 0.5rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 40vh;
+        background-attachment: scroll !important;
+        background-position: center center !important;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .tagline {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .location-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .network-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-btn {
+        display: block;
+        width: calc(100% - 2rem);
+        max-width: 320px;
+        margin: 0 auto 1rem auto;
+    }
+}

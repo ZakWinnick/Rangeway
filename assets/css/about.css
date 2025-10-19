@@ -1,0 +1,200 @@
+/* About Page Specific Styles */
+
+/* === HERO === */
+.hero {
+    margin-top: 82px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                      url('https://rangeway.energy/images/waystation-exterior1-shasta.jpg');
+    background-position: center 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--golden-highway);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* === CONTENT GRID === */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.content-grid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(240, 144, 96, 0.3) 20%,
+        rgba(240, 144, 96, 0.3) 80%,
+        transparent
+    );
+    transform: translateX(-50%);
+}
+
+.content-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--golden-highway);
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.content-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-coral), var(--golden-highway));
+    border-radius: 2px;
+}
+
+.content-text p {
+    font-size: 1.1rem;
+    color: var(--fog-gray);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* === VALUES GRID === */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(240, 144, 96, 0.25);
+    border-color: rgba(240, 144, 96, 0.2);
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.1) translateY(-3px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+.value-card h4 {
+    font-size: 1.3rem;
+    color: var(--golden-highway);
+    margin-bottom: 0.8rem;
+}
+
+.value-card p {
+    color: var(--fog-gray);
+    line-height: 1.7;
+}
+
+/* === ALTERNATIVE BACKGROUND === */
+.alt-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.alt-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(240, 144, 96, 0.4) 50%,
+        transparent
+    );
+}
+
+.alt-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(240, 144, 96, 0.4) 50%,
+        transparent
+    );
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        min-height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .content-grid::before {
+        display: none;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
