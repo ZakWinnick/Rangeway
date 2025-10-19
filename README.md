@@ -19,7 +19,7 @@ This website introduces the brand, experience, team, and ways to connect.
 ## Tech Stack
 
 - **PHP + HTML/CSS** (no framework)
-- Static assets in `/images`
+- Static assets in `/images` (some root-level images are referenced directly)
 - Simple includes for layout (`header.php`, `footer.php`)
 
 ```bash
@@ -52,10 +52,15 @@ php -S localhost:3000
 /README.md                 # This file
 /index.php                 # Home page
 /about.php                 # About Rangeway
+/team.php                  # Team page
 /contact.php               # Contact form (client)
 /contact-handler.php       # Contact form (server handler)
 /locations.php             # Locations overview
 /header.php, footer.php    # Layout includes
+/banner.png                # Homepage/banner graphic
+/rangeway-logo.png         # Logo asset used in layout
+/trailhead-exterior1.jpg   # Root-level images referenced on pages
+/trailhead-exterior-alamo3.jpg
 /privacy/                  # Privacy & terms pages
 /images/                   # Logos, photos, and assets
 /old/                      # Legacy pages (not in public nav)
