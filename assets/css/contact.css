@@ -3,7 +3,7 @@
 /* === HERO === */
 .hero {
     margin-top: 82px;
-    min-height: 82vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
