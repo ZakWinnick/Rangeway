@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Site Economics - Rangeway Energy</title>
+    <style>
+        :root {
+            --sunset-coral: #F09060;
+            --golden-highway: #FFB366;
+            --mountain-charcoal: #4A4A4A;
+            --coastal-cream: #F5DEB3;
+            --ocean-deep: #2C5F7C;
+            --fog-gray: #B8B8B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--coastal-cream);
+            color: var(--mountain-charcoal);
+            padding: 3rem 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--mountain-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            color: var(--fog-gray);
+            font-weight: 400;
+        }
+
+        .top-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .card-title.revenue {
+            color: var(--sunset-coral);
+        }
+
+        .card-title.income {
+            color: var(--ocean-deep);
+        }
+
+        .revenue-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 1rem 0;
+        }
+
+        .revenue-row .label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--mountain-charcoal);
+        }
+
+        .revenue-row .value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--sunset-coral);
+        }
+
+        .revenue-total {
+            background: rgba(240, 144, 96, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .revenue-total .total-label {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--mountain-charcoal);
+            margin-bottom: 0.25rem;
+        }
+
+        .revenue-total .growth {
+            font-size: 0.85rem;
+            color: var(--fog-gray);
+        }
+
+        .revenue-mix {
+            margin-top: 1.5rem;
+        }
+
+        .revenue-mix-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--mountain-charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .mix-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--mountain-charcoal);
+        }
+
+        .income-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .income-col {
+            text-align: center;
+        }
+
+        .income-col .year {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--fog-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .income-col .amount {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--ocean-deep);
+            margin-bottom: 0.25rem;
+        }
+
+        .income-col .margin {
+            font-size: 0.8rem;
+            color: var(--fog-gray);
+        }
+
+        .milestones {
+            background: rgba(44, 95, 124, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .milestones-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--mountain-charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .milestone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--mountain-charcoal);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--sunset-coral);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.95rem;
+            color: var(--fog-gray);
+            font-weight: 600;
+        }
+
+        .assumptions {
+            background: var(--mountain-charcoal);
+            border-radius: 16px;
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            color: white;
+        }
+
+        .assumptions h3 {
+            font-size: 1.3rem;
+            color: var(--golden-highway);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .assumptions ul {
+            list-style: none;
+        }
+
+        .assumptions li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .assumptions li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--golden-highway);
+            font-weight: bold;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--fog-gray);
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 1200px) {
+            .top-grid,
+            .assumptions {
+                grid-template-columns: 1fr;
+            }
+
+            .income-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .income-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Single Site Economics</h1>
+            <p class="subtitle">Path to 40%+ margins and $2M cumulative profit</p>
+        </div>
+
+        <div class="top-grid">
+            <!-- Revenue Growth Card -->
+            <div class="card">
+                <div class="card-title revenue">
+                    💰 Revenue Growth
+                </div>
+                
+                <div class="revenue-row">
+                    <span class="label">Year 1</span>
+                    <span class="value">$1.16M</span>
+                </div>
+                
+                <div class="revenue-row">
+                    <span class="label">Year 5</span>
+                    <span class="value">$1.30M</span>
+                </div>
+
+                <div class="revenue-total">
+                    <div class="total-label">5-Year Total: $6.14M</div>
+                    <div class="growth">3% annual growth</div>
+                </div>
+
+                <div class="revenue-mix">
+                    <div class="revenue-mix-title">Revenue Mix (Year 3):</div>
+                    <div class="mix-item">⚡ Charging: 89% ($1.08M)</div>
+                    <div class="mix-item">📺 Digital Ads: 2% ($18K)</div>
+                    <div class="mix-item">🌱 LCFS Credits: 10% ($123K)</div>
+                </div>
+            </div>
+
+            <!-- Net Income Card -->
+            <div class="card">
+                <div class="card-title income">
+                    📊 Net Income Ramp
+                </div>
+
+                <div class="income-grid">
+                    <div class="income-col">
+                        <div class="year">Y1</div>
+                        <div class="amount">$67K</div>
+                        <div class="margin">5.8%</div>
+                    </div>
+                    <div class="income-col">
+                        <div class="year">Y2</div>
+                        <div class="amount">$295K</div>
+                        <div class="margin">24.8%</div>
+                    </div>
+                    <div class="income-col">
+                        <div class="year">Y3</div>
+                        <div class="amount">$524K</div>
+                        <div class="margin">42.8%</div>
+                    </div>
+                    <div class="income-col">
+                        <div class="year">Y4</div>
+                        <div class="amount">$543K</div>
+                        <div class="margin">43.0%</div>
+                    </div>
+                    <div class="income-col">
+                        <div class="year">Y5</div>
+                        <div class="amount">$564K</div>
+                        <div class="margin">43.2%</div>
+                    </div>
+                </div>
+
+                <div class="milestones">
+                    <div class="milestones-title">🎯 Key Milestones</div>
+                    <div class="milestone">✅ Year 1: Cash flow positive</div>
+                    <div class="milestone">✅ Year 3: Equipment paid off</div>
+                    <div class="milestone">✅ Year 3-5: 40%+ margins</div>
+                    <div class="milestone">✅ 5-Year: $2.0M cumulative profit</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">36-42 mo</div>
+                <div class="metric-label">Payback Period</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">8.4x</div>
+                <div class="metric-label">Income Growth (Y1→Y5)</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$1.18M</div>
+                <div class="metric-label">Total CapEx</div>
+            </div>
+        </div>
+
+        <!-- Assumptions -->
+        <div class="assumptions">
+            <div>
+                <h3>Revenue Assumptions</h3>
+                <ul>
+                    <li>Single site with 4 × 350kW chargers</li>
+                    <li>4 hours daily utilization per charger</li>
+                    <li>Retail rate: $0.50/kWh</li>
+                    <li>LCFS credits: $0.06/kWh</li>
+                    <li>Advertising: 30% inventory sold at $6 CPM</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cost Assumptions</h3>
+                <ul>
+                    <li>Electricity: $0.20/kWh</li>
+                    <li>CapEx: 18-month fixed loan at 10%</li>
+                    <li>Land & building: 15-year mortgage at 5.8%</li>
+                    <li>OpEx & SG&A: 20% of gross charging revenue</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Conservative baseline: 15% utilization • 40-60% solar offset • Hub-satellite operational model
+        </div>
+    </div>
+</body>
+</html>

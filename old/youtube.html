@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Rangeway: Complete YouTube Series Playbook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sunset-coral: #F09060;
+            --golden-highway: #FFB366;
+            --mountain-charcoal: #4A4A4A;
+            --coastal-cream: #F5DEB3;
+            --ocean-deep: #2C5F7C;
+            --fog-gray: #B8B8B8;
+            --bg-dark: #1a1a1a;
+            --bg-darker: #0f0f0f;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar TOC */
+        .sidebar {
+            width: 320px;
+            background-color: var(--bg-darker);
+            padding: 2rem 1.5rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 2px solid var(--mountain-charcoal);
+        }
+
+        .sidebar h1 {
+            font-size: 1.5rem;
+            color: var(--sunset-coral);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .sidebar .subtitle {
+            color: var(--fog-gray);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--mountain-charcoal);
+        }
+
+        .toc-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .toc-section h3 {
+            color: var(--golden-highway);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .toc-section ul {
+            list-style: none;
+        }
+
+        .toc-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .toc-section a:hover {
+            color: var(--sunset-coral);
+            background-color: rgba(240, 144, 96, 0.1);
+            padding-left: 1.2rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 320px;
+            padding: 3rem 4rem;
+            max-width: 1200px;
+            flex: 1;
+        }
+
+        .hero {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--mountain-charcoal);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--sunset-coral);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--golden-highway);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--ocean-deep);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--sunset-coral);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--golden-highway);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+            color: var(--text-primary);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: var(--golden-highway);
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--coastal-cream);
+            font-style: italic;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--ocean-deep);
+            color: var(--coastal-cream);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metadata {
+            background-color: rgba(44, 95, 124, 0.2);
+            border-left: 4px solid var(--ocean-deep);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .metadata p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .act-section {
+            background-color: rgba(240, 144, 96, 0.05);
+            border-left: 4px solid var(--sunset-coral);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .resources {
+            background-color: rgba(255, 179, 102, 0.1);
+            border: 1px solid var(--golden-highway);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .resources h4 {
+            color: var(--golden-highway);
+            margin-top: 0;
+        }
+
+        code {
+            background-color: var(--mountain-charcoal);
+            color: var(--coastal-cream);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .season-header {
+            background: linear-gradient(135deg, var(--sunset-coral), var(--golden-highway));
+            color: var(--bg-darker);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .season-header h2 {
+            color: var(--bg-darker);
+            border: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .season-header p {
+            color: var(--bg-darker);
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 280px;
+            }
+            .main-content {
+                margin-left: 280px;
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 2px solid var(--mountain-charcoal);
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-darker);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--mountain-charcoal);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--sunset-coral);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar TOC -->
+        <aside class="sidebar">
+            <h1>Building Rangeway</h1>
+            <p class="subtitle">Complete YouTube Series Playbook</p>
+
+            <div class="toc-section">
+                <h3>Overview</h3>
+                <ul>
+                    <li><a href="#overview">Series Overview</a></li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h3>Launch Content</h3>
+                <ul>
+                    <li><a href="#teaser">Teaser/Trailer (60-90 sec)</a></li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h3>Season 1: Foundation</h3>
+                <ul>
+                    <li><a href="#ep1">Episode 1: Why I'm Building Rangeway</a></li>
+                    <li><a href="#ep2">Episode 2: How Rangeway Works</a></li>
+                    <li><a href="#ep3">Episode 3: Where We're Building</a></li>
+                    <li><a href="#ep4">Episode 4: Who's Building This</a></li>
+                    <li><a href="#ep5">Episode 5: When This Happens</a></li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h3>Season 2: Deep Dives</h3>
+                <ul>
+                    <li><a href="#ep6">Episode 6: Raising $5M</a></li>
+                    <li><a href="#ep7">Episode 7: Technology Stack</a></li>
+                    <li><a href="#ep8">Episode 8: Pathfinder Rewards</a></li>
+                    <li><a href="#ep9">Episode 9: Site Visits</a></li>
+                    <li><a href="#ep10">Episode 10: Real Estate Deal</a></li>
+                    <li><a href="#ep11">Episode 11: Building the Brand</a></li>
+                    <li><a href="#ep12">Episode 12: Hiring Trailkeepers</a></li>
+                    <li><a href="#ep13">Episode 13: Permits & Utilities</a></li>
+                    <li><a href="#ep14">Episode 14: Breaking Ground</a></li>
+                    <li><a href="#ep15">Episode 15: 90 Days Until Opening</a></li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h3>Season 3: Operations</h3>
+                <ul>
+                    <li><a href="#ep16">Episode 16: Opening Day</a></li>
+                    <li><a href="#ep17-20">Episodes 17-20: Post-Launch</a></li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#ongoing-formats">Ongoing Series Formats</a></li>
+                    <li><a href="#production-calendar">Production Calendar</a></li>
+                    <li><a href="#distribution">Distribution Strategy</a></li>
+                    <li><a href="#metrics">Success Metrics</a></li>
+                    <li><a href="#equipment">Equipment & Production</a></li>
+                    <li><a href="#legal">Legal & Brand Protection</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="hero">
+                <h1>Building Rangeway: Complete YouTube Series Playbook</h1>
+                <p>A comprehensive guide to documenting the journey of building Rangeway Energy from concept to operation, building community and establishing thought leadership in EV infrastructure.</p>
+            </div>
+
+            <!-- Overview Section -->
+            <section id="overview">
+                <h2>Series Overview</h2>
+                
+                <div class="metadata">
+                    <p><strong>Series Goal:</strong> Document the entire journey of building Rangeway Energy from concept to operation, building community and trust while establishing Zak as a thought leader in EV infrastructure.</p>
+                </div>
+
+                <h3>Target Audience</h3>
+                <ul>
+                    <li>EV owners and enthusiasts</li>
+                    <li>Aspiring infrastructure entrepreneurs</li>
+                    <li>Investors interested in cleantech/mobility</li>
+                    <li>Potential customers and brand advocates</li>
+                    <li>Industry professionals</li>
+                </ul>
+
+                <h3>Posting Cadence</h3>
+                <p>Every 2 weeks initially, scaling to weekly once construction begins</p>
+
+                <h3>Platform Strategy</h3>
+                <ul>
+                    <li><strong>YouTube:</strong> Long-form 10-15 min episodes (primary)</li>
+                    <li><strong>YouTube Shorts:</strong> 60-90 sec key moments</li>
+                    <li><strong>Instagram Reels:</strong> Same as YouTube Shorts</li>
+                    <li><strong>LinkedIn:</strong> Business/founder insights</li>
+                    <li><strong>Email Newsletter:</strong> Episode recaps with deeper context</li>
+                </ul>
+            </section>
+
+            <!-- Teaser/Trailer -->
+            <section id="teaser">
+                <h2>Teaser/Trailer: "Building Rangeway"</h2>
+                
+                <div class="metadata">
+                    <p><span class="badge">60-90 seconds</span></p>
+                    <p><strong>Goal:</strong> Create excitement and anticipation for the series</p>
+                    <p><strong>Use Cases:</strong> Pre-launch hype, channel trailer, social media ads, investor intro</p>
+                    <p><strong>Key Metric:</strong> Click-through rate to Episode 1, email/subscriber signups</p>
+                </div>
+
+                <h3>Script Structure</h3>
+
+                <div class="act-section">
+                    <h4>Opening Shot (0:00-0:05)</h4>
+                    <p><strong>Visual:</strong> Drone shot flying over a stunning scenic corridor (mountains/coast/wine country)</p>
+                    <p><strong>Audio:</strong> Ambient wind/nature sounds, then cut to silence</p>
+                    <p><strong>Text on screen:</strong> "The future of transportation is electric."</p>
+                </div>
+
+                <div class="act-section">
+                    <h4>The Problem (0:05-0:20)</h4>
+                    <p><strong>Visual:</strong> Quick cuts:</p>
+                    <ul>
+                        <li>EV charging in rain at exposed parking lot charger</li>
+                        <li>Broken charger with "Out of Service" screen</li>
+                        <li>Driver looking frustrated at phone</li>
+                        <li>Empty highway stretching into beautiful landscape</li>
+                    </ul>
+                    <p><strong>Voiceover (You speaking):</strong><br>
+                    "But on America's most beautiful roads...<br>
+                    <em>[Beat]</em><br>
+                    Charging is broken."</p>
+                </div>
+
+                <div class="act-section">
+                    <h4>The Vision (0:20-0:45)</h4>
+                    <p><strong>Visual:</strong> Mix of:</p>
+                    <ul>
+                        <li>You standing at future site location pointing at plans</li>
+                        <li>Concept renders of Basecamp (if available)</li>
+                        <li>Kempower equipment shots</li>
+                        <li>Beautiful interior lounge mockup</li>
+                        <li>Coffee being poured in café</li>
+                        <li>Solar canopy rendering</li>
+                        <li>Map showing network expanding</li>
+                    </ul>
+                    <p><strong>Voiceover (Faster pace, building energy):</strong><br>
+                    "My name is Zak Winnick.<br>
+                    And I'm building Rangeway Energy—<br>
+                    A charging network designed like a hotel chain,<br>
+                    not a gas station.<br>
+                    <br>
+                    Premium lounges. Real coffee. 99% uptime.<br>
+                    Where charging becomes part of your journey."</p>
+                </div>
+
+                <div class="act-section">
+                    <h4>The Journey (0:45-1:10)</h4>
+                    <p><strong>Visual:</strong> Rapid montage:</p>
+                    <ul>
+                        <li>You at whiteboard with financial models</li>
+                        <li>Meeting with advisors (Raul, James, Theo)</li>
+                        <li>Site visits with drone shots</li>
+                        <li>Pitch meeting (back of room shot)</li>
+                        <li>Construction plans being reviewed</li>
+                        <li>Hard hat on desk</li>
+                        <li>You looking at sunset over site location</li>
+                    </ul>
+                    <p><strong>Voiceover (Honest, vulnerable tone):</strong><br>
+                    "I'm going to document everything.<br>
+                    The fundraising. The real estate deals. The construction.<br>
+                    The wins. The setbacks. The reality of building infrastructure.<br>
+                    <br>
+                    This is a $50 million bet that electric road trips can be better."</p>
+                </div>
+
+                <div class="act-section">
+                    <h4>The Stakes (1:10-1:20)</h4>
+                    <p><strong>Visual:</strong> Slow zoom on you, direct to camera, golden hour lighting</p>
+                    <p><strong>You to camera:</strong><br>
+                    "I don't know if this will work.<br>
+                    But I know someone needs to try.<br>
+                    <br>
+                    Come with me."</p>
+                </div>
+
+                <div class="act-section">
+                    <h4>Closing (1:20-1:30)</h4>
+                    <p><strong>Visual:</strong> Logo reveal with animated mountain/path/sun elements</p>
+                    <p><strong>Text on screen:</strong></p>
+                    <ul>
+                        <li>"BUILDING RANGEWAY"</li>
+                        <li>"A documentary series"</li>
+                        <li>"Episode 1: [Date]"</li>
+                        <li>"Subscribe now"</li>
+                    </ul>
+                    <p><strong>Audio:</strong> Subtle music swell, fade to logo sound effect</p>
+                </div>
+
+                <div class="resources">
+                    <h4>Production Notes</h4>
+                    
+                    <p><strong>Cinematography Style:</strong></p>
+                    <ul>
+                        <li>Premium, cinematic look (think tech company product launch)</li>
+                        <li>Wide establishing shots, intimate close-ups</li>
+                        <li>Golden hour lighting whenever possible</li>
+                        <li>Smooth camera movements (gimbal/drone)</li>
+                        <li>Color grade toward warm tones (Sunset Coral/Golden Highway)</li>
+                    </ul>
+
+                    <p><strong>Music:</strong></p>
+                    <ul>
+                        <li>Build from ambient/minimal to inspiring/epic</li>
+                        <li>Think: Inspiring piano → building strings → triumphant finish</li>
+                        <li>Licensed music from Artlist, Epidemic Sound, or Musicbed</li>
+                        <li>Or commission original score for brand consistency</li>
+                    </ul>
+
+                    <p><strong>Pacing:</strong></p>
+                    <ul>
+                        <li>First 5 seconds: Grab attention (problem hook)</li>
+                        <li>Middle 45 seconds: Build excitement (vision & journey)</li>
+                        <li>Final 20 seconds: Create urgency (stakes & CTA)</li>
+                        <li>Keep cuts tight - no shot longer than 3-4 seconds</li>
+                    </ul>
+
+                    <p><strong>Voiceover Recording:</strong></p>
+                    <ul>
+                        <li>Record in quiet space with good acoustics</li>
+                        <li>Warm, conversational tone (not announcer voice)</li>
+                        <li>Vary pacing: slower for emotion, faster for energy</li>
+                        <li>Record multiple takes, cherry-pick best lines</li>
+                        <li>Leave pauses for music/visual moments</li>
+                    </ul>
+
+                    <h4>Critical B-Roll Shots Needed</h4>
+                    <ul>
+                        <li>✅ Scenic corridor drone shot (opening hero shot)</li>
+                        <li>✅ You at future site location with plans/maps</li>
+                        <li>✅ Current broken/bad charging stations</li>
+                        <li>✅ Concept renders or sketches of Basecamp</li>
+                        <li>✅ You working: whiteboard, laptop, meetings</li>
+                        <li>✅ Advisor meetings (even if just establishing shots)</li>
+                        <li>✅ Sunset/golden hour shot of site location</li>
+                        <li>✅ You direct to camera in good lighting</li>
+                        <li>✅ Logo animation (commission from designer)</li>
+                    </ul>
+
+                    <h4>Multiple Version Strategy</h4>
+                    
+                    <p><strong>Version A: Full Trailer (90 seconds)</strong></p>
+                    <ul>
+                        <li>YouTube pre-roll before Episode 1</li>
+                        <li>Channel trailer for new visitors</li>
+                        <li>LinkedIn/Twitter video posts</li>
+                    </ul>
+
+                    <p><strong>Version B: Social Teaser (60 seconds)</strong></p>
+                    <ul>
+                        <li>Trim to fastest pacing</li>
+                        <li>Instagram/TikTok/YouTube Shorts vertical format (9:16)</li>
+                        <li>Add captions (80% watch without sound)</li>
+                        <li>End CTA: "Full series starts [date]"</li>
+                    </ul>
+
+                    <p><strong>Version C: Investor Cut (90 seconds)</strong></p>
+                    <ul>
+                        <li>Same footage, different emphasis</li>
+                        <li>More business metrics on screen</li>
+                        <li>Highlight advisor credentials</li>
+                        <li>End CTA: "Join us. [email]"</li>
+                    </ul>
+
+                    <p><strong>Version D: 15-Second Tease</strong></p>
+                    <ul>
+                        <li>Just the hook + logo + date</li>
+                        <li>For social media ads</li>
+                        <li>Drive to full trailer or Episode 1</li>
+                    </ul>
+
+                    <h4>Distribution Strategy</h4>
+                    
+                    <p><strong>Timeline:</strong></p>
+                    <ul>
+                        <li><strong>2 weeks before Episode 1:</strong> Post full trailer on YouTube</li>
+                        <li><strong>10 days before:</strong> Social teaser versions across all platforms</li>
+                        <li><strong>1 week before:</strong> 15-second ads on social (if budget allows)</li>
+                        <li><strong>3 days before:</strong> Email blast to personal network with trailer</li>
+                        <li><strong>Launch day:</strong> Pin trailer to YouTube channel, link from Episode 1</li>
+                    </ul>
+
+                    <p><strong>Where to Post:</strong></p>
+                    <ul>
+                        <li>YouTube: Main video + pinned to channel</li>
+                        <li>Instagram: Reel (9:16 vertical) + Story</li>
+                        <li>TikTok: Full vertical version</li>
+                        <li>LinkedIn: Full version for professional audience</li>
+                        <li>Twitter/X: Cropped for timeline</li>
+                        <li>Facebook: Cross-post from YouTube</li>
+                        <li>Email: Embedded or linked</li>
+                    </ul>
+
+                    <h4>Titles & Descriptions</h4>
+
+                    <p><strong>YouTube Title:</strong></p>
+                    <p>"Building Rangeway: Coming Soon | A $50M EV Charging Network Documentary"</p>
+
+                    <p><strong>YouTube Description:</strong></p>
+                    <code style="display: block; white-space: pre-wrap; padding: 1rem; margin: 1rem 0;">I'm Zak Winnick, and I'm building a $50M EV charging network from the ground up.
+
+This isn't just another charging company. Rangeway Energy is designed like a boutique hotel chain—premium lounges, real coffee, 99% uptime—for America's most beautiful scenic routes.
+
+Starting [DATE], I'm documenting everything:
+→ Raising $5M in pre-seed funding
+→ Securing prime real estate
+→ Building the technology stack
+→ Hiring the team
+→ Construction and launch
+→ The reality of running an infrastructure company
+
+No filters. No BS. Just the honest journey of trying to build something that should exist.
+
+🎬 Episode 1 drops: [DATE]
+📧 Join early: [website/email]
+🏔️ Follow along: @rangewayenergy
+
+This is either going to work spectacularly...or fail publicly.
+Either way, you'll see it all.
+
+#EVCharging #Entrepreneurship #Documentary #RangewayEnergy</code>
+
+                    <p><strong>Social Media Caption (Short Version):</strong></p>
+                    <code style="display: block; white-space: pre-wrap; padding: 1rem; margin: 1rem 0;">I'm building a $50M EV charging network.
+
+Not parking lot chargers. Not gas station add-ons.
+
+Premium destinations with:
+→ Climate-controlled lounges
+→ Real café service  
+→ 99% uptime guarantee
+
+Full documentary series starts [DATE].
+This is going to be wild. 🏔️⚡
+
+Subscribe: [link]</code>
+
+                    <h4>Thumbnail Design</h4>
+                    <ul>
+                        <li><strong>Option 1:</strong> You standing at site location, arms crossed, looking at camera. Text: "BUILDING RANGEWAY" + "Documentary Series"</li>
+                        <li><strong>Option 2:</strong> Split screen: broken charger on left, beautiful Basecamp render on right. Text: "The Future of EV Charging"</li>
+                        <li><strong>Option 3:</strong> Cinematic shot of scenic landscape with Rangeway logo overlay. Text: "Coming Soon"</li>
+                        <li>Use Rangeway brand colors: Sunset Coral, Golden Highway accents</li>
+                        <li>High contrast for mobile viewing</li>
+                        <li>Test 3-4 versions, see which gets best CTR</li>
+                    </ul>
+                </div>
+
+                <h3>Alternative: "Cinematic" Version</h3>
+                <p>If you want an even more dramatic teaser with NO voiceover—just visuals and music:</p>
+
+                <div class="act-section">
+                    <h4>Silent Cinematic Teaser (60 seconds)</h4>
+                    <ul>
+                        <li><strong>0:00-0:10:</strong> Beautiful scenic shots with broken chargers mixed in</li>
+                        <li><strong>0:10-0:15:</strong> Text on screen: "The problem with EV charging"</li>
+                        <li><strong>0:15-0:30:</strong> Rapid cutting: You working, meetings, site visits, plans</li>
+                        <li><strong>0:30-0:35:</strong> Text: "One founder. One mission."</li>
+                        <li><strong>0:35-0:50:</strong> Beautiful Basecamp renders/concepts, equipment shots</li>
+                        <li><strong>0:50-0:55:</strong> Text: "Where charging becomes part of your journey"</li>
+                        <li><strong>0:55-1:00:</strong> Logo reveal + "Episode 1: [DATE]"</li>
+                    </ul>
+                    <p><strong>Advantage:</strong> Works in any language, more shareable, purely visual storytelling</p>
+                    <p><strong>Disadvantage:</strong> Less personal, doesn't establish you as narrator/guide</p>
+                </div>
+            </section>
+
+            <!-- Season 1 -->
+            <div class="season-header">
+                <h2>SEASON 1: FOUNDATION ARC (Episodes 1-5)</h2>
+                <p>Establish credibility, explain the vision, build initial audience</p>
+            </div>
+
+            <!-- Episode 1 -->
+            <section id="ep1">
+                <h2>Episode 1: "Why I'm Building Rangeway Energy"</h2>
+                
+                <div class="metadata">
+                    <p><span class="badge">10-12 minutes</span></p>
+                    <p><strong>Goal:</strong> Make viewers care about YOU, then about Rangeway</p>
+                    <p><strong>Key Metric:</strong> High watch-through rate (this is your hook episode)</p>
+                </div>
+
+                <h3>Structure</h3>
+
+                <div class="act-section">
+                    <h4>Hook (0:00-0:30)</h4>
+                    <ul>
+                        <li>"I'm about to spend the next several years of my life building something that probably shouldn't exist..."</li>
+                        <li>Quick intro: Name, what you're building, invite them on the journey</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 1: Personal Story (0:30-3:30)</h4>
+                    <ul>
+                        <li>Your EV journey (Rivian ownership, club community leadership)</li>
+                        <li>The crystallizing moment - specific bad charging experience on scenic route</li>
+                        <li>Your background: 15+ years IT operations + hospitality</li>
+                        <li>"I understand both reliable systems AND great experiences"</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 2: The Problem (3:30-6:00)</h4>
+                    <ul>
+                        <li>Current charging sucks on scenic routes</li>
+                        <li>The dwell time paradox (20-40 min vs. 5-7 min gas stops)</li>
+                        <li>Reliability crisis (70-80% uptime industry standard)</li>
+                        <li>"We're building the future with infrastructure thinking of the past"</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 3: The Vision (6:00-9:00)</h4>
+                    <ul>
+                        <li>Core insight: Design for how people actually travel scenic routes</li>
+                        <li>Basecamp vs. Waystation introduction (high-level only)</li>
+                        <li>99% uptime commitment</li>
+                        <li>Hospitality DNA: "Think boutique hotel meets charging station"</li>
+                        <li>"Where charging becomes part of your journey" (tagline reveal)</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 4: Stakes & Invitation (9:00-11:00)</h4>
+                    <ul>
+                        <li>This is hard: Multi-million dollar investment, complex permitting, big competition</li>
+                        <li>Why do it anyway: Belief in EV future, somebody needs to do this differently</li>
+                        <li>Invite them on the journey: Full transparency, wins and losses</li>
+                        <li>Subscribe and come along</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Closing (11:00-12:00)</h4>
+                    <ul>
+                        <li>Next episode tease: "The business model and how this actually makes money"</li>
+                        <li>CTA: Subscribe, comment with your charging experiences</li>
+                    </ul>
+                </div>
+
+                <div class="resources">
+                    <h4>B-Roll Needs</h4>
+                    <ul>
+                        <li>You driving EV on scenic route</li>
+                        <li>Current charging stations (good and bad)</li>
+                        <li>Beautiful scenery</li>
+                        <li>Your workspace/planning</li>
+                        <li>Coffee cup (foreshadowing café concept)</li>
+                        <li>Maps and planning documents</li>
+                    </ul>
+
+                    <h4>Title</h4>
+                    <p>"Why I'm Building a $50M EV Charging Network | Building Rangeway Ep. 1"</p>
+
+                    <h4>Thumbnail</h4>
+                    <p>You looking at camera, text overlay "Building a $50M EV Network"</p>
+
+                    <h4>Document Citations</h4>
+                    <ul>
+                        <li>Business Plan p.28-29 (Basecamp/Waystation overview)</li>
+                        <li>Marketing Playbook v3 Part 1 (brand purpose)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Episode 2 -->
+            <section id="ep2">
+                <h2>Episode 2: "How Rangeway Actually Works"</h2>
+                
+                <div class="metadata">
+                    <p><span class="badge">12-15 minutes</span></p>
+                    <p><strong>Goal:</strong> Show this is a real business with solid economics, not just a dream</p>
+                    <p><strong>Key Metric:</strong> Engagement from potential investors/partners</p>
+                </div>
+
+                <h3>Structure</h3>
+
+                <div class="act-section">
+                    <h4>Hook (0:00-0:30)</h4>
+                    <ul>
+                        <li>"Last video: the why. This video: the how."</li>
+                        <li>"I'm going to show you the exact business model, the real numbers, and why this can actually work"</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 1: The Two-Site Model (0:30-3:30)</h4>
+                    <p><strong>Basecamps:</strong> Full-service hubs</p>
+                    <ul>
+                        <li>6-8 chargers, 2,500-3,000 sq ft lounge</li>
+                        <li>Café, premium restrooms, work zones</li>
+                        <li>Regional maintenance center + NOC</li>
+                        <li>99% uptime commitment, 35-55 min dwell time</li>
+                    </ul>
+
+                    <p><strong>Waystations:</strong> Automated excellence</p>
+                    <ul>
+                        <li>4 chargers (8 ports), 800-1,000 sq ft lounge</li>
+                        <li>Automated vending, clean restrooms</li>
+                        <li>Remote monitoring, no staff, 98% uptime</li>
+                        <li>Maintained by Basecamp teams</li>
+                    </ul>
+
+                    <p><strong>Regional Cluster Strategy:</strong></p>
+                    <ul>
+                        <li>1 Basecamp + 3 Waystations</li>
+                        <li>~2 hour mobile response time</li>
+                        <li>"Sites support each other - it's an ecosystem"</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 2: The Economics (3:30-7:30)</h4>
+                    <p><strong>Basecamp Economics:</strong></p>
+                    <ul>
+                        <li>CapEx: $5-7M per site</li>
+                        <li>Revenue at maturity: ~$90K/month</li>
+                        <li>Payback: 48-60 months</li>
+                        <li>60-80 DCFC sessions/day by Year 3</li>
+                    </ul>
+
+                    <p><strong>Waystation Economics:</strong></p>
+                    <ul>
+                        <li>CapEx: $2-3M per site</li>
+                        <li>Revenue at maturity: ~$30K/month</li>
+                        <li>Payback: 24-36 months</li>
+                        <li>Year 1 charging revenue: $1,022,000</li>
+                        <li>Year 1 electricity cost: $408,800</li>
+                        <li>Year 1 net: $613,200</li>
+                    </ul>
+
+                    <p><strong>Regional Cluster at Maturity:</strong></p>
+                    <ul>
+                        <li>Total: $180K/month = $2.16M annually</li>
+                        <li>Total CapEx: $11-16M</li>
+                        <li>Payback: 36-42 months</li>
+                    </ul>
+
+                    <p><strong>Revenue Streams (Priority Order):</strong></p>
+                    <ol>
+                        <li>Per-kWh charging fees (primary - $0.50/kWh retail)</li>
+                        <li>Café and retail at Basecamps (40% attachment rate)</li>
+                        <li>Digital advertising ($5-10K/month per site at maturity)</li>
+                        <li>Pathfinder Rewards memberships</li>
+                        <li>EV app roaming integrations</li>
+                    </ol>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 3: Operational Secret Sauce (7:30-10:30)</h4>
+                    <p><strong>Technology Stack:</strong></p>
+                    <ul>
+                        <li>Kempower Satellite charging systems (modular, reliable)</li>
+                        <li>Clockwork Energy (real-time monitoring, predictive maintenance)</li>
+                        <li>ChargeMate (AI driver support)</li>
+                        <li>ChargeEye CPMS</li>
+                    </ul>
+
+                    <p><strong>The Monitoring System:</strong></p>
+                    <ul>
+                        <li>Basecamp NOC monitors all regional sites 24/7</li>
+                        <li>Predictive maintenance reduces emergency repairs 50-70%</li>
+                        <li>Mobile response vehicles stationed at Basecamps</li>
+                        <li>"We don't wait for things to break"</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 4: The Loyalty Moat (10:30-13:00)</h4>
+                    <ul>
+                        <li>Not gas station rewards - "travel lifestyle program"</li>
+                        <li>4 tiers: Explorer, Voyager, Pioneer, Trailblazer</li>
+                        <li>Year 5 projection: $935K+ in membership revenue</li>
+                        <li>"We're building something people CHOOSE, not tolerate"</li>
+                    </ul>
+                </div>
+
+                <div class="resources">
+                    <h4>B-Roll Needs</h4>
+                    <ul>
+                        <li>Whiteboard/screen with financial models</li>
+                        <li>Site diagrams and mockups</li>
+                        <li>Kempower equipment photos</li>
+                        <li>Excel spreadsheet visuals</li>
+                        <li>Tech dashboard mockups</li>
+                    </ul>
+
+                    <h4>Title</h4>
+                    <p>"The $50M Business Plan: How Rangeway Makes Money | Ep. 2"</p>
+
+                    <h4>Document Citations</h4>
+                    <ul>
+                        <li>Business Plan p.28-29, 32, 40-45</li>
+                        <li>Excel: "SITE PROFORMA" and "INPUT VALUES"</li>
+                        <li>Pathfinder Rewards Playbook</li>
+                        <li>Kempower Quote</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Episode 3 -->
+            <section id="ep3">
+                <h2>Episode 3: "Where We're Building Rangeway"</h2>
+                
+                <div class="metadata">
+                    <p><span class="badge">10-13 minutes</span></p>
+                    <p><strong>Goal:</strong> Make it tangible - real places, real strategy</p>
+                    <p><strong>Key Metric:</strong> Regional engagement (comments from locals)</p>
+                </div>
+
+                <h3>Structure</h3>
+
+                <div class="act-section">
+                    <h4>Hook (0:00-0:30)</h4>
+                    <ul>
+                        <li>Open on map with three pins</li>
+                        <li>"These three pins represent the next two years of my life"</li>
+                        <li>"Why site selection might be our most important decision"</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 1: Why Site Selection Matters (0:30-2:30)</h4>
+                    <p><strong>You can't move a charging station</strong></p>
+                    <p><strong>The Perfect Storm of Requirements:</strong></p>
+                    <ul>
+                        <li>High EV traffic (or will be soon)</li>
+                        <li>Scenic tourism destination</li>
+                        <li>Charging desert (gap in existing infrastructure)</li>
+                        <li>Highway proximity</li>
+                        <li>Utility access (affordable interconnection)</li>
+                        <li>Right zoning and local support</li>
+                    </ul>
+                    <p><strong>Our Secret Weapon:</strong> ElectroTempo - AI-driven demand forecasting</p>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 2: The First Corridor (2:30-5:30)</h4>
+                    <p><em>[Decide: Name specific corridor OR general region]</em></p>
+                    <ul>
+                        <li>Tourism statistics and EV adoption rate</li>
+                        <li>Current charging gap analysis</li>
+                        <li>Scenic appeal and travel experience</li>
+                        <li>"Never more than X minutes from reliable charging"</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 3: The Three Sites (5:30-9:30)</h4>
+                    <p><strong>Site 1: The Basecamp</strong></p>
+                    <ul>
+                        <li>CapEx: $5-7M, Revenue: ~$90K/month at maturity</li>
+                        <li>6-8 chargers, full café, regional NOC</li>
+                        <li>"The anchor for the entire regional network"</li>
+                    </ul>
+
+                    <p><strong>Sites 2 & 3: Waystations</strong></p>
+                    <ul>
+                        <li>CapEx: $2-3M each, Revenue: ~$30K/month each</li>
+                        <li>4 chargers, automated lounge</li>
+                        <li>"Completes the triangle - full corridor coverage"</li>
+                    </ul>
+
+                    <p><strong>The Cluster:</strong></p>
+                    <ul>
+                        <li>Together: $180K/month = $2.16M annually</li>
+                        <li>$11-16M total investment</li>
+                        <li>36-42 month cluster payback</li>
+                    </ul>
+                </div>
+
+                <div class="act-section">
+                    <h4>Act 4: The Challenges (9:30-11:30)</h4>
+                    <ul>
+                        <li>Real estate negotiations: $1.5M of pre-seed</li>
+                        <li>Utility interconnection: $500K budgeted</li>
+                        <li>Permitting: 12-18 month process</li>
+                        <li>Competition: "First mover advantage is real"</li>
+                    </ul>
+                </div>
+
+                <div class="resources">
+                    <h4>B-Roll Needs</h4>
+                    <ul>
+                        <li>Map animations (pins, overlays, zoom)</li>
+                        <li>Drive footage of the corridor</li>
+                        <li>Scenic landscape shots</li>
+                        <li>Satellite imagery of sites</li>
+                        <li>Site visit footage (if available)</li>
+                    </ul>
+
+                    <h4>Title</h4>
+                    <p>"Our First 3 Locations Revealed | Building Rangeway Ep. 3"</p>
+
+                    <h4>Document Citations</h4>
+                    <ul>
+                        <li>Business Plan p.19-24, 40, 42, 44-45, 50</li>
+                        <li>ElectroTempo partnership</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Episode 4 -->
+            <section id="ep4">
+                <h2>Episode 4: "Who's Building This With Me"</h2>
+                
+                <div class="metadata">
+                    <p><span class="badge">10-12 minutes</span></p>
+                    <p><strong>Goal:</strong> Establish credibility through world-class advisors</p>
+                    <p><strong>Key Metric:</strong> LinkedIn shares, investor inquiries</p>
+                </div>
+
+                <h3>The Advisory Team (Each ~1.5 minutes)</h3>
+
+                <h4>Raul Dominguez - Technical Advisor</h4>
+                <ul>
+                    <li>CEO & Co-founder, Evolve Energy Inc.</li>
+                    <li>Former Design Manager, Tesla Northern California Supercharger network (70+ sites)</li>
+                    <li>Built Rivian Adventure Network</li>
+                    <li><em>"If anyone knows reliable charging infrastructure, it's Raul"</em></li>
+                </ul>
+
+                <h4>James Regan - Finance/Strategy Advisor</h4>
+                <ul>
+                    <li>30+ years corporate development</li>
+                    <li>Managing Partner, CapitalWorks Consulting Group</li>
+                    <li>EV charging financials specialist</li>
+                    <li><em>"Takes my napkin math and makes it investor-grade"</em></li>
+                </ul>
+
+                <h4>Theo Reichgelt - CMO (Fractional)</h4>
+                <ul>
+                    <li>Founder/CEO, Nexxt Industry (Europe's leading eMobility marketing agency)</li>
+                    <li>8+ years eMobility marketing</li>
+                    <li>Host, The eMobility Marketing Podcast</li>
+                    <li><em>"Understands we're selling experiences, not kilowatt-hours"</em></li>
+                </ul>
+
+                <h4>Stephanie McGreevy - Grants/LCFS Advisor</h4>
+                <ul>
+                    <li>15+ years zero-emission vehicle infrastructure</li>
+                    <li>Founder, Open Energy Alliance</li>
+                    <li>LCFS expert and grant specialist</li>
+                    <li>Could reduce net CapEx 30-40% through grants</li>
+                </ul>
+
+                <h4>Colin Regan - Strategy & Financial Modeling</h4>
+                <ul>
+                    <li>10+ years business consulting</li>
+                    <li>Utilities, transportation, infrastructure sectors</li>
+                    <li>Day-to-day financial modeling support</li>
+                </ul>
+
+                <h3>What's Still Missing</h3>
+                <p><strong>Full-time roles we need:</strong></p>
+                <ul>
+                    <li>CFO, CTO, COO (Q3 2026)</li>
+                    <li>VP Operations & Site Management</li>
+                    <li>Network Manager</li>
+                    <li>Service & Maintenance Manager</li>
+                </ul>
+
+                <div class="resources">
+                    <h4>Title</h4>
+                    <p>"Meet the Team Building Rangeway | Ep. 4"</p>
+
+                    <h4>Document Citations</h4>
+                    <ul>
+                        <li>Business Plan p.14-19 (full team bios)</li>
+                        <li>SM STAFFING PLAN v2.xlsx</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Episode 5 -->
+            <section id="ep5">
+                <h2>Episode 5: "When This All Happens"</h2>
+                
+                <div class="metadata">
+                    <p><span class="badge">12-15 minutes</span></p>
+                    <p><strong>Goal:</strong> Create urgency, show the roadmap, make a call to action</p>
+                    <p><strong>Key Metric:</strong> Email signups, investor inquiries, brand awareness</p>
+                </div>
+
+                <h3>The $5M Pre-Seed Breakdown</h3>
+                <ul>
+                    <li><strong>Site Acquisition & Control (30% - $1.5M):</strong> LOIs, deposits, studies, legal</li>
+                    <li><strong>Engineering & Design (25% - $1.25M):</strong> Utility coordination ($500K), drawings, specs</li>
+                    <li><strong>Team Building (25% - $1.25M):</strong> 5 key hires, recruiting, operations</li>
+                    <li><strong>Go-to-Market (10% - $500K):</strong> Brand launch, digital platform, partnerships</li>
+                    <li><strong>Contingency & Legal (10% - $500K):</strong> Working capital, professional services</li>
+                </ul>
+
+                <h3>Timeline Overview</h3>
+
+                <h4>2025 Q4 (Now - Next 3 Months)</h4>
+                <ul>
+                    <li>Close pre-seed round</li>
+                    <li>Begin site acquisition</li>
+                    <li>Launch brand presence</li>
+                </ul>
+
+                <h4>2026 Q1-Q2 (Months 4-6)</h4>
+                <ul>
+                    <li>Site control secured</li>
+                    <li>Permit applications submitted</li>
+                    <li>Hire core team (5 positions)</li>
+                    <li>"Rangeway Pioneers" program</li>
+                </ul>
+
+                <h4>2026 Q3-Q4 (Months 7-12)</h4>
+                <ul>
+                    <li>Permits approved</li>
+                    <li>Raise Series A ($15-25M)</li>
+                    <li>Equipment orders placed</li>
+                    <li>Marketing ramp-up (6 months pre-launch)</li>
+                    <li>Hire executives (CFO, CTO, COO)</li>
+                </ul>
+
+                <h4>2027 Q1 (Months 13-15)</h4>
+                <ul>
+                    <li>Construction begins</li>
+                    <li>Staff training</li>
+                    <li>Digital platform testing</li>
+                    <li>Grand opening planning</li>
+                </ul>
+
+                <h4>2027 Q2 (Months 16-18)</h4>
+                <ul>
+                    <li><strong>Sites go live!</strong></li>
+                    <li>1 Basecamp + 2 Waystations operational</li>
+                    <li>Grand opening events</li>
+                    <li>First customer sessions</li>
+                </ul>
+
+                <h3>Key Milestones</h3>
+
+                <h4>Year 1 (2027)</h4>
+                <ul>
+                    <li>10,000 charging sessions</li>
+                    <li>80+ NPS score</li>
+                    <li>$1.5M annual revenue run rate</li>
+                    <li>98%+ network uptime</li>
+                </ul>
+
+                <h4>Year 2 (2028)</h4>
+                <ul>
+                    <li>2 Basecamps + 4-6 Waystations total</li>
+                    <li>40,000 charging sessions</li>
+                    <li>$4M annual revenue run rate</li>
+                </ul>
+
+                <h4>Year 3 (2029)</h4>
+                <ul>
+                    <li>4 Basecamps + 8-12 Waystations total</li>
+                    <li>120,000 charging sessions</li>
+                    <li>Site-level profitability achieved</li>
+                    <li>$8M annual revenue run rate</li>
+                </ul>
+
+                <div class="resources">
+                    <h4>Title</h4>
+                    <p>"The Complete Timeline: When Rangeway Opens | Ep. 5"</p>
+
+                    <h4>Document Citations</h4>
+                    <ul>
+                        <li>Business Plan p.38-39 (KPIs and milestones)</li>
+                        <li>Business Plan p.50 (pre-seed use of funds)</li>
+                        <li>Marketing Playbook v3 Part 15</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Season 2 -->
+            <div class="season-header">
+                <h2>SEASON 2: DEEP DIVES (Episodes 6-15)</h2>
+                <p>Build expertise, document the journey, attract investors/partners</p>
+            </div>
+
+            <section id="ep6">
+                <h2>Episode 6: "Raising $5M: The Pre-Seed Process"</h2>
+                <div class="metadata">
+                    <p><span class="badge">12-15 minutes</span></p>
+                    <p><strong>Goal:</strong> Transparency on fundraising, attract investors</p>
+                </div>
+                <ul>
+                    <li>Why $5M?</li>
+                    <li>Who we're pitching</li>
+                    <li>The pitch deck breakdown</li>
+                    <li>Investor questions and objections</li>
+                    <li>Term sheet negotiations</li>
+                    <li>What I'm learning</li>
+                </ul>
+            </section>
+
+            <section id="ep7">
+                <h2>Episode 7: "The Technology Stack"</h2>
+                <div class="metadata">
+                    <p><span class="badge">10-13 minutes</span></p>
+                    <p><strong>Goal:</strong> Educate on tech choices, position as technical expert</p>
+                </div>
+                <ul>
+                    <li>Why Kempower Satellite over alternatives</li>
+                    <li>The 600kW power system breakdown</li>
+                    <li>Clockwork Energy's predictive maintenance</li>
+                    <li>ChargeMate's AI driver support</li>
+                    <li>HyWatts off-grid/hybrid systems</li>
+                    <li>"How we achieve 99% uptime"</li>
+                </ul>
+            </section>
+
+            <section id="ep8">
+                <h2>Episode 8: "Pathfinder Rewards: Our Loyalty Moat"</h2>
+                <div class="metadata">
+                    <p><span class="badge">12-15 minutes</span></p>
+                    <p><strong>Goal:</strong> Deep dive on loyalty program, excite potential members</p>
+                </div>
+                <ul>
+                    <li>"Travel lifestyle program, not gas station rewards"</li>
+                    <li>4 tiers: Explorer, Voyager, Pioneer, Trailblazer</li>
+                    <li>Benefits at each tier</li>
+                    <li>Year 5 revenue: $935K+ from memberships</li>
+                    <li>Founding Member offer</li>
+                    <li>How to join early</li>
+                </ul>
+            </section>
+
+            <section id="ep9">
+                <h2>Episode 9: "Site Visits: Walking Our First Locations"</h2>
+                <div class="metadata">
+                    <p><span class="badge">10-12 minutes</span></p>
+                    <p><strong>Goal:</strong> Make it visceral - show the actual land</p>
+                </div>
+                <ul>
+                    <li>Drive to each site location</li>
+                    <li>Stand where Basecamp will be</li>
+                    <li>Show the views, access, utility connections</li>
+                    <li>Walk through the customer experience</li>
+                    <li>Challenges visible on-site</li>
+                </ul>
+            </section>
+
+            <section id="ep10">
+                <h2>Episode 10: "The Real Estate Deal"</h2>
+                <div class="metadata">
+                    <p><span class="badge">10-13 minutes</span></p>
+                    <p><strong>Goal:</strong> Show behind-the-scenes of land acquisition</p>
+                </div>
+                <ul>
+                    <li>Finding the property owner</li>
+                    <li>The negotiation process</li>
+                    <li>Lease vs. purchase decision</li>
+                    <li>Environmental and geotechnical studies</li>
+                    <li>How we structured the deal</li>
+                </ul>
+            </section>
+
+            <section id="ep11">
+                <h2>Episode 11: "Building the Brand: Why 'Rangeway'?"</h2>
+                <div class="metadata">
+                    <p><span class="badge">8-10 minutes</span></p>
+                    <p><strong>Goal:</strong> Marketing and brand education</p>
+                </div>
+                <ul>
+                    <li>Name origin and meaning</li>
+                    <li>Logo design process (mountain, path, sun)</li>
+                    <li>Color palette: Sunset Coral, Golden Highway, Mountain Charcoal</li>
+                    <li>Photography style (golden hour, authentic moments)</li>
+                    <li>"Where charging becomes part of your journey"</li>
+                </ul>
+            </section>
+
+            <section id="ep12">
+                <h2>Episode 12: "Hiring Trailkeepers"</h2>
+                <div class="metadata">
+                    <p><span class="badge">10-12 minutes</span></p>
+                    <p><strong>Goal:</strong> Show culture and hiring approach</p>
+                </div>
+                <ul>
+                    <li>Why "Trailkeepers" not "attendants"</li>
+                    <li>Hospitality DNA from day one</li>
+                    <li>What we look for in team members</li>
+                    <li>Training program</li>
+                    <li>Career growth paths</li>
+                </ul>
+            </section>
+
+            <section id="ep13">
+                <h2>Episode 13: "Permits, Utilities & Red Tape"</h2>
+                <div class="metadata">
+                    <p><span class="badge">10-13 minutes</span></p>
+                    <p><strong>Goal:</strong> Educate on infrastructure complexity</p>
+                </div>
+                <ul>
+                    <li>Environmental reviews</li>
+                    <li>Planning commission hearings</li>
+                    <li>Building permits</li>
+                    <li>Utility interconnection ($500K allocation)</li>
+                    <li>Why it takes 12-18 months</li>
+                    <li>"Why infrastructure is hard"</li>
+                </ul>
+            </section>
+
+            <section id="ep14">
+                <h2>Episode 14: "Breaking Ground: Construction Begins"</h2>
+                <div class="metadata">
+                    <p><span class="badge">12-15 minutes</span></p>
+                    <p><strong>Goal:</strong> Milestone celebration, show progress</p>
+                </div>
+                <ul>
+                    <li>Groundbreaking ceremony</li>
+                    <li>Meet True Compass (contractor)</li>
+                    <li>ReNuTeq bamboo canopy construction</li>
+                    <li>Construction timeline: 4-6 months</li>
+                    <li>Time-lapse preview</li>
+                </ul>
+            </section>
+
+            <section id="ep15">
+                <h2>Episode 15: "90 Days Until Opening"</h2>
+                <div class="metadata">
+                    <p><span class="badge">10-12 minutes</span></p>
+                    <p><strong>Goal:</strong> Build anticipation, show operational readiness</p>
+                </div>
+                <ul>
+                    <li>Construction completion walkthrough</li>
+                    <li>Kempower charger installation</li>
+                    <li>Interior finishes (café, lounge, restrooms)</li>
+                    <li>Staff training underway</li>
+                    <li>Grand opening date announcement</li>
+                </ul>
+            </section>
+
+            <!-- Season 3 -->
+            <div class="season-header">
+                <h2>SEASON 3: OPERATIONS (Episodes 16+)</h2>
+                <p>Show reality of running the network, lessons learned</p>
+            </div>
+
+            <section id="ep16">
+                <h2>Episode 16: "Opening Day"</h2>
+                <ul>
+                    <li>Grand opening event</li>
+                    <li>First customers</li>
+                    <li>Real-time operations</li>
+                    <li>Emotional moments</li>
+                    <li>Initial feedback</li>
+                </ul>
+            </section>
+
+            <section id="ep17-20">
+                <h2>Episodes 17-20: Post-Launch Content</h2>
+                
+                <h3>Episode 17: "Week 1: What We Learned"</h3>
+                <ul>
+                    <li>Operational challenges</li>
+                    <li>Customer feedback</li>
+                    <li>First adjustments</li>
+                </ul>
+
+                <h3>Episode 18: "30-Day Review: The Real Numbers"</h3>
+                <ul>
+                    <li>Actual utilization vs. projections</li>
+                    <li>Revenue performance</li>
+                    <li>Uptime achievement</li>
+                    <li>NPS results</li>
+                </ul>
+
+                <h3>Episode 19: "Scaling to Waystations"</h3>
+                <ul>
+                    <li>Second site construction</li>
+                    <li>NOC in action</li>
+                    <li>Remote monitoring demonstration</li>
+                </ul>
+
+                <h3>Episode 20: "Year 1 Complete: Did We Hit Our Goals?"</h3>
+                <ul>
+                    <li>10,000 sessions target</li>
+                    <li>Revenue vs. projections</li>
+                    <li>Customer stories</li>
+                    <li>What's next for Year 2</li>
+                </ul>
+            </section>
+
+            <!-- Ongoing Formats -->
+            <section id="ongoing-formats">
+                <h2>Ongoing Series Formats</h2>
+
+                <h3>Monthly Updates</h3>
+                <ul>
+                    <li>"Rangeway Monthly: [Month] Update"</li>
+                    <li>Quick 5-7 minute summaries</li>
+                    <li>Session counts, new features, highlights</li>
+                </ul>
+
+                <h3>Customer Features</h3>
+                <ul>
+                    <li>"Rangeway Stories: [Driver Name]"</li>
+                    <li>8-10 minute profiles</li>
+                    <li>Why they chose Rangeway</li>
+                    <li>Build advocacy and UGC</li>
+                </ul>
+
+                <h3>Behind the Scenes</h3>
+                <ul>
+                    <li>"A Day at Rangeway: [Role]"</li>
+                    <li>Follow Trailkeepers, maintenance techs</li>
+                    <li>10-12 minutes</li>
+                    <li>Humanize the brand</li>
+                </ul>
+            </section>
+
+            <!-- Production Calendar -->
+            <section id="production-calendar">
+                <h2>Production Calendar (Year 1)</h2>
+
+                <h3>Months 1-2 (Now)</h3>
+                <ul>
+                    <li>Episodes 1-2: WHY and HOW</li>
+                    <li>Post every 2 weeks</li>
+                </ul>
+
+                <h3>Months 3-4</h3>
+                <ul>
+                    <li>Episodes 3-5: WHERE, WHO, WHEN</li>
+                    <li>Ramp to weekly if possible</li>
+                </ul>
+
+                <h3>Months 5-8</h3>
+                <ul>
+                    <li>Episodes 6-9: Deep dives</li>
+                    <li>Weekly posting</li>
+                </ul>
+
+                <h3>Months 9-12</h3>
+                <ul>
+                    <li>Episodes 10-13: Real Estate, Brand, Hiring, Permits</li>
+                    <li>Weekly posting</li>
+                </ul>
+
+                <h3>Months 13-18 (Construction Phase)</h3>
+                <ul>
+                    <li>Episodes 14-15: Construction progress</li>
+                    <li>Construction time-lapses</li>
+                    <li>Monthly updates + weekly shorts</li>
+                </ul>
+
+                <h3>Month 18+ (Opening)</h3>
+                <ul>
+                    <li>Episode 16: Opening Day (BIG EPISODE)</li>
+                    <li>Shift to operational content</li>
+                    <li>Continue weekly cadence</li>
+                </ul>
+            </section>
+
+            <!-- Distribution Strategy -->
+            <section id="distribution">
+                <h2>Cross-Platform Distribution Strategy</h2>
+
+                <h3>YouTube Long-Form</h3>
+                <ul>
+                    <li>Primary content (10-15 min episodes)</li>
+                    <li>Full storytelling arc</li>
+                    <li>SEO optimized</li>
+                </ul>
+
+                <h3>YouTube Shorts (60-90 sec)</h3>
+                <ul>
+                    <li>Key moments from each episode</li>
+                    <li>Teasers for next episode</li>
+                    <li>Post 2-3 per week</li>
+                </ul>
+
+                <h3>Instagram</h3>
+                <ul>
+                    <li>Reels: Same as YouTube Shorts</li>
+                    <li>Stories: Behind-the-scenes, daily updates</li>
+                    <li>Feed: Episode thumbnails, key visuals</li>
+                </ul>
+
+                <h3>TikTok</h3>
+                <ul>
+                    <li>Shorter clips (30-60 sec)</li>
+                    <li>Construction updates</li>
+                    <li>Founder insights</li>
+                </ul>
+
+                <h3>LinkedIn</h3>
+                <ul>
+                    <li>Episode announcements</li>
+                    <li>Business lessons</li>
+                    <li>Target investors and partners</li>
+                </ul>
+
+                <h3>Email Newsletter</h3>
+                <ul>
+                    <li>Weekly digest</li>
+                    <li>Episode recaps with deeper context</li>
+                    <li>Exclusive insights</li>
+                </ul>
+
+                <h3>Website Blog</h3>
+                <ul>
+                    <li>Written versions of episodes</li>
+                    <li>SEO content</li>
+                    <li>Route guides and resources</li>
+                </ul>
+            </section>
+
+            <!-- Success Metrics -->
+            <section id="metrics">
+                <h2>Series Success Metrics</h2>
+
+                <h3>Vanity Metrics</h3>
+                <ul>
+                    <li>Subscribers: Target 50,000 by end of Year 1</li>
+                    <li>Total views: 1M+ across all episodes Year 1</li>
+                    <li>Engagement rate: >5%</li>
+                </ul>
+
+                <h3>Business Metrics</h3>
+                <ul>
+                    <li>Investor inquiries generated</li>
+                    <li>Partnership conversations started</li>
+                    <li>Early adopter signups ("Rangeway Pioneers")</li>
+                    <li>Email list growth</li>
+                    <li>Press coverage mentions</li>
+                </ul>
+
+                <h3>Quality Metrics</h3>
+                <ul>
+                    <li>Average watch time: >60%</li>
+                    <li>NPS from viewers</li>
+                    <li>Comment quality and engagement</li>
+                    <li>LinkedIn shares from target audience</li>
+                </ul>
+            </section>
+
+            <!-- Equipment & Production -->
+            <section id="equipment">
+                <h2>Equipment & Production Checklist</h2>
+
+                <h3>Already Have</h3>
+                <ul>
+                    <li>Camera (good quality)</li>
+                    <li>Microphone (lavalier for clean audio)</li>
+                    <li>Basic lighting</li>
+                    <li>Editing software</li>
+                </ul>
+
+                <h3>Consider Adding</h3>
+                <ul>
+                    <li>Teleprompter app (for consistent delivery)</li>
+                    <li>Portable green screen (for map graphics)</li>
+                    <li>Drone (for aerial site shots)</li>
+                    <li>External monitor (for framing)</li>
+                    <li>Backup SD cards and batteries</li>
+                </ul>
+
+                <h3>Software Stack</h3>
+                <ul>
+                    <li>Editing: Adobe Premiere or Final Cut Pro</li>
+                    <li>Graphics: Canva (brand colors already defined)</li>
+                    <li>Thumbnails: Photoshop or Canva</li>
+                    <li>Audio: Audition (clean up audio)</li>
+                    <li>Scheduling: TubeBuddy or VidIQ</li>
+                </ul>
+            </section>
+
+            <!-- Legal & Brand Protection -->
+            <section id="legal">
+                <h2>Legal & Brand Protection</h2>
+
+                <h3>Before Publishing</h3>
+                <ul>
+                    <li>Get signed releases from anyone featured</li>
+                    <li>Blur sensitive financial information</li>
+                    <li>Don't reveal exact site addresses until deals closed</li>
+                    <li>Clear music rights (use royalty-free or licensed)</li>
+                    <li>Trademark "Rangeway Energy" and logo</li>
+                </ul>
+
+                <h3>What to Avoid Showing</h3>
+                <ul>
+                    <li>Investor names without permission</li>
+                    <li>Contract details</li>
+                    <li>Exact financial projections (ranges OK)</li>
+                    <li>Competitive intelligence sources</li>
+                    <li>Unreleased product features</li>
+                </ul>
+            </section>
+
+            <!-- Next Steps -->
+            <section id="next-steps">
+                <h2>Call to Action: Your Next Steps</h2>
+
+                <ol>
+                    <li><strong>Film Episode 1 this week</strong> - The "WHY" episode</li>
+                    <li><strong>Set up YouTube channel</strong> - Branding with Rangeway colors/logo</li>
+                    <li><strong>Create content calendar</strong> - Commit to posting schedule</li>
+                    <li><strong>Film b-roll library</strong> - Start capturing footage now</li>
+                    <li><strong>Write Episode 2 script</strong> - Lock in the "HOW" episode</li>
+                    <li><strong>Plan Episode 3</strong> - Schedule site visit for filming</li>
+                </ol>
+
+                <div class="metadata">
+                    <p><strong>Recommendation:</strong> Film Episodes 1-3 before publishing #1, so you have momentum and can commit to a consistent biweekly schedule.</p>
+                </div>
+
+                <h3>Brand Colors Reference (For Graphics/Thumbnails)</h3>
+                <p><strong>Primary Palette:</strong></p>
+                <ul>
+                    <li>Sunset Coral: #F09060 (RGB 240, 144, 96)</li>
+                    <li>Golden Highway: #FFB366 (RGB 255, 179, 102)</li>
+                    <li>Mountain Charcoal: #4A4A4A (RGB 74, 74, 74)</li>
+                </ul>
+
+                <p><strong>Supporting Palette:</strong></p>
+                <ul>
+                    <li>Coastal Cream: #F5DEB3 (RGB 245, 222, 179)</li>
+                    <li>Ocean Deep: #2C5F7C (RGB 44, 95, 124)</li>
+                    <li>Fog Gray: #B8B8B8 (RGB 184, 184, 184)</li>
+                </ul>
+
+                <p>Use these consistently across all thumbnails, graphics, and channel branding.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

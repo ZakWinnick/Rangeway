@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Charts</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 40px;
+            margin: 0;
+        }
+        
+        .chart-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .main-chart {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #F09060;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .revenue-chart {
+            position: relative;
+            height: 400px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+        }
+        
+        .y-axis {
+            position: absolute;
+            left: 10px;
+            top: 30px;
+            bottom: 50px;
+            width: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .y-label {
+            font-size: 12px;
+            color: #888;
+            text-align: right;
+        }
+        
+        .chart-bars {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            gap: 25px;
+            margin-left: 60px;
+            height: 350px;
+        }
+        
+        .year-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+        }
+        
+        .revenue-bar {
+            width: 100%;
+            background: linear-gradient(180deg, #F09060 0%, #FFB366 100%);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+            max-width: 80px;
+        }
+        
+        .revenue-bar:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            color: #F09060;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        
+        .year-label {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #888;
+            font-weight: 600;
+        }
+        
+        .funding-marker {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .funding-amount {
+            background: #4A4A4A;
+            color: #FFB366;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .funding-line {
+            width: 2px;
+            height: 30px;
+            background: #4A4A4A;
+            margin: 5px auto 0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .metric-card {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #3a3a3a;
+        }
+        
+        .metric-title {
+            color: #888;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .metric-number {
+            color: #F09060;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-subtitle {
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .profitability-indicator {
+            position: absolute;
+            width: calc(100% - 60px);
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                #4CAF50,
+                #4CAF50 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            left: 60px;
+            opacity: 0.6;
+        }
+        
+        .profitability-label {
+            position: absolute;
+            right: 10px;
+            color: #4CAF50;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: #1a1a1a;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 30px;
+            height: 4px;
+            border-radius: 2px;
+        }
+        
+        .revenue-color {
+            background: linear-gradient(90deg, #F09060 0%, #FFB366 100%);
+        }
+        
+        .funding-color {
+            background: #4A4A4A;
+        }
+        
+        .profit-color {
+            background: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div class="main-chart">
+            <h2>Revenue Growth & Funding Timeline</h2>
+            <div class="revenue-chart">
+                <div class="y-axis">
+                    <div class="y-label">$25M</div>
+                    <div class="y-label">$20M</div>
+                    <div class="y-label">$15M</div>
+                    <div class="y-label">$10M</div>
+                    <div class="y-label">$5M</div>
+                    <div class="y-label">$0</div>
+                </div>
+                
+                <!-- Profitability line at Year 4 -->
+                <div class="profitability-indicator" style="bottom: 140px;">
+                    <span class="profitability-label">Network Profitable</span>
+                </div>
+                
+                <div class="chart-bars">
+                    <div class="year-group">
+                        <div class="funding-marker">
+                            <div class="funding-amount">Pre-Seed $5M</div>
+                            <div class="funding-line"></div>
+                        </div>
+                        <div class="revenue-bar" style="height: 0%;"></div>
+                        <span class="year-label">2025</span>
+                    </div>
+                    
+                    <div class="year-group">
+                        <div class="funding-marker">
+                            <div class="funding-amount">Series A $30M</div>
+                            <div class="funding-line"></div>
+                        </div>
+                        <div class="revenue-bar" style="height: 7%;">
+                            <span class="bar-value">$450K</span>
+                        </div>
+                        <span class="year-label">2026</span>
+                    </div>
+                    
+                    <div class="year-group">
+                        <div class="revenue-bar" style="height: 28%;">
+                            <span class="bar-value">$2.8M</span>
+                        </div>
+                        <span class="year-label">2027</span>
+                    </div>
+                    
+                    <div class="year-group">
+                        <div class="funding-marker">
+                            <div class="funding-amount">Series B $50M</div>
+                            <div class="funding-line"></div>
+                        </div>
+                        <div class="revenue-bar" style="height: 52%;">
+                            <span class="bar-value">$6.5M</span>
+                        </div>
+                        <span class="year-label">2028</span>
+                    </div>
+                    
+                    <div class="year-group">
+                        <div class="funding-marker">
+                            <div class="funding-amount">Debt $75M</div>
+                            <div class="funding-line"></div>
+                        </div>
+                        <div class="revenue-bar" style="height: 72%;">
+                            <span class="bar-value">$12M</span>
+                        </div>
+                        <span class="year-label">2029</span>
+                    </div>
+                    
+                    <div class="year-group">
+                        <div class="revenue-bar" style="height: 96%;">
+                            <span class="bar-value">$24M</span>
+                        </div>
+                        <span class="year-label">2030</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color revenue-color"></div>
+                    <span>Revenue</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color funding-color"></div>
+                    <span>Funding Events</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color profit-color"></div>
+                    <span>Profitability</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Gross Margin</div>
+                <div class="metric-number">70%</div>
+                <div class="metric-subtitle">by Year 5</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-title">Site Profitability</div>
+                <div class="metric-number">18-24</div>
+                <div class="metric-subtitle">months</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-title">Capital Efficiency</div>
+                <div class="metric-number">$1M</div>
+                <div class="metric-subtitle">revenue per $4M deployed</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-title">Grant Upside</div>
+                <div class="metric-number">30-40%</div>
+                <div class="metric-subtitle">CapEx reduction potential</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

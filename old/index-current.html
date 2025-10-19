@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://tinylytics.app/embed/9_N5xEnQSTdibXFSDoqf.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rangeway Energy - Premium EV charging network for America's scenic routes.">
+    <title>Rangeway Energy | Premium EV Charging for Scenic Routes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sunset-coral: #F09060;
+            --golden-highway: #FFB366;
+            --mountain-charcoal: #4A4A4A;
+            --coastal-cream: #F5DEB3;
+            --ocean-deep: #2C5F7C;
+            --fog-gray: #B8B8B8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--coastal-cream);
+            background-color: var(--ocean-deep);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--mountain-charcoal);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: var(--golden-highway);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--coastal-cream);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--golden-highway);
+        }
+
+        .nav-cta {
+            background: var(--sunset-coral);
+            color: var(--mountain-charcoal);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(240, 144, 96, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 82px;
+            min-height: calc(100vh - 82px);
+            background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--mountain-charcoal) 100%);
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--coastal-cream);
+        }
+
+        .hero-text .highlight {
+            color: var(--sunset-coral);
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: var(--coastal-cream);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--golden-highway);
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: var(--fog-gray);
+        }
+
+        .btn-primary {
+            background: var(--sunset-coral);
+            color: var(--mountain-charcoal);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(240, 144, 96, 0.3);
+        }
+
+        .hero-map {
+            background: var(--mountain-charcoal);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .hero-map h3 {
+            color: var(--golden-highway);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-map p {
+            color: var(--fog-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: var(--ocean-deep);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-hub {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hub-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--sunset-coral), var(--golden-highway));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--ocean-deep);
+            font-size: 0.9rem;
+            box-shadow: 0 8px 20px rgba(240, 144, 96, 0.3);
+            margin: 0 auto 0.5rem;
+        }
+
+        .hub-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--coastal-cream);
+        }
+
+        .connection-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .map-point {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: var(--mountain-charcoal);
+            border: 2px solid var(--golden-highway);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--coastal-cream);
+            font-weight: 700;
+            font-size: 0.8rem;
+            z-index: 2;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--golden-highway);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--fog-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Network Section */
+        .network-model {
+            background: var(--mountain-charcoal);
+        }
+
+        .station-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .station-card {
+            background: var(--ocean-deep);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .station-header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .basecamp-header {
+            background: linear-gradient(135deg, var(--sunset-coral), var(--golden-highway));
+        }
+
+        .waystation-header {
+            background: var(--mountain-charcoal);
+        }
+
+        .station-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--mountain-charcoal);
+        }
+
+        .waystation-header h3 {
+            color: var(--golden-highway);
+        }
+
+        .station-header .subtitle {
+            font-size: 1rem;
+            color: var(--mountain-charcoal);
+        }
+
+        .waystation-header .subtitle {
+            color: var(--coastal-cream);
+        }
+
+        .station-content {
+            padding: 2rem;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .spec-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .spec-details h4 {
+            font-size: 0.9rem;
+            color: var(--golden-highway);
+            margin-bottom: 0.25rem;
+        }
+
+        .spec-details p {
+            font-size: 0.85rem;
+            color: var(--fog-gray);
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(245, 222, 179, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--coastal-cream);
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--sunset-coral);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Benefits Section */
+        .network-benefits-section {
+            background: var(--ocean-deep);
+        }
+
+        .network-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: var(--mountain-charcoal);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--golden-highway);
+        }
+
+        .benefit-card p {
+            color: var(--fog-gray);
+            line-height: 1.6;
+        }
+
+        .benefit-card ul {
+            margin-top: 1rem;
+            padding-left: 1.25rem;
+            color: var(--coastal-cream);
+        }
+
+        /* Partners Section */
+        .partners {
+            background: var(--mountain-charcoal);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .partner-card {
+            background: var(--ocean-deep);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .partner-card h4 {
+            color: var(--golden-highway);
+            margin-bottom: 0.5rem;
+        }
+
+        .partner-card h4 a {
+            color: var(--golden-highway);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .partner-card h4 a:hover {
+            color: var(--sunset-coral);
+        }
+
+        .partner-card p {
+            font-size: 0.9rem;
+            color: var(--fog-gray);
+        }
+
+        /* Investment Section */
+        .investment {
+            background: var(--ocean-deep);
+        }
+
+        .investment-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .metric-card {
+            background: var(--mountain-charcoal);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--golden-highway);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: var(--coastal-cream);
+        }
+
+        .metric-detail {
+            font-size: 0.9rem;
+            color: var(--fog-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);
+            color: var(--fog-gray);
+        }
+
+        .newsletter h2 {
+            color: var(--mountain-charcoal);
+        }
+
+        .newsletter p {
+            color: var(--ocean-deep);
+        }
+
+        .newsletter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 3rem auto 0;
+        }
+
+        .newsletter-card {
+            background: var(--mountain-charcoal);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .newsletter-card h3 {
+            color: var(--golden-highway);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .newsletter-card p {
+            color: var(--coastal-cream);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--mountain-charcoal);
+            color: var(--coastal-cream);
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--golden-highway);
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--fog-gray);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--coastal-cream);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(245, 222, 179, 0.1);
+            color: var(--fog-gray);
+            max-width: 1600px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .station-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-text">RANGEWAY</div>
+            <div class="nav-links">
+                <a href="#network">Regional Clusters</a>
+                <a href="#experience">The Experience</a>
+                <a href="https://rangeway.app" target="_blank">Pathfinder Rewards</a>
+                <a href="#partners">Partners</a>
+                <a href="#investment">Investment</a>
+                <a href="#contact" class="nav-cta">Join Our Journey</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Premium EV charging for<br><span class="highlight">America's scenic routes.</span></h1>
+                <p>Regional cluster model designed for electric tourism: Each Basecamp supports up to 3 Waystations. Every location guarantees indoor comfort and 99% uptime.</p>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">2</span>
+                        <span class="hero-stat-label">Location types</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">99%</span>
+                        <span class="hero-stat-label">Basecamp uptime</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">~2hrs</span>
+                        <span class="hero-stat-label">Response time</span>
+                    </div>
+                </div>
+                
+                <a href="#network" class="btn-primary">Explore Network</a>
+            </div>
+            
+            <div class="hero-map">
+                <h3>Regional Cluster Model</h3>
+                <p>Each Basecamp supports up to 3 Waystations</p>
+                <div class="map-container">
+                    <div class="map-hub">
+                        <div class="hub-icon">BASE</div>
+                        <span class="hub-label">Regional Basecamp</span>
+                    </div>
+                    
+                    <svg class="connection-lines">
+                        <line x1="50%" y1="50%" x2="30%" y2="20%" stroke="#FFB366" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+                        <line x1="50%" y1="50%" x2="70%" y2="25%" stroke="#FFB366" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+                        <line x1="50%" y1="50%" x2="50%" y2="78%" stroke="#FFB366" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+                    </svg>
+                    
+                    <div class="map-point" style="left: 30%; top: 20%;">W1</div>
+                    <div class="map-point" style="left: 70%; top: 25%;">W2</div>
+                    <div class="map-point" style="left: 50%; top: 78%;">W3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="network-model" id="network">
+        <div class="container">
+            <div class="section-header">
+                <h2>Two Location Types, One Seamless Network</h2>
+                <p>Basecamps provide full-service amenities and regional support. Waystations offer automated charging with climate-controlled comfort.</p>
+            </div>
+            
+            <div class="station-showcase">
+                <div class="station-card">
+                    <div class="station-header basecamp-header">
+                        <h3>🏔️ Basecamps</h3>
+                        <p class="subtitle">Full-Service Regional Centers</p>
+                    </div>
+                    <div class="station-content">
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon">⚡</div>
+                                <div class="spec-details">
+                                    <h4>6-8 Chargers</h4>
+                                    <p>Ultra-fast DC charging</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">☕</div>
+                                <div class="spec-details">
+                                    <h4>Full Café</h4>
+                                    <p>Local roasters & retail</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🏢</div>
+                                <div class="spec-details">
+                                    <h4>2,500-3,000 sq ft</h4>
+                                    <p>Climate-controlled lounge</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🔧</div>
+                                <div class="spec-details">
+                                    <h4>Regional Support</h4>
+                                    <p>NOC & maintenance center</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="feature-list">
+                            <li>99% uptime commitment</li>
+                            <li>Staffed with Journey Guides</li>
+                            <li>4+ premium restrooms</li>
+                            <li>Conference nooks & work zones</li>
+                            <li>Solar canopy & battery storage</li>
+                            <li>Mobile response vehicle on-site</li>
+                            <li>24/7 Network Operations Center</li>
+                            <li>~$90K/month revenue at maturity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="station-card">
+                    <div class="station-header waystation-header">
+                        <h3>🚗 Waystations</h3>
+                        <p class="subtitle">Automated Regional Sites</p>
+                    </div>
+                    <div class="station-content">
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon">⚡</div>
+                                <div class="spec-details">
+                                    <h4>4 Chargers</h4>
+                                    <p>8 ports (dual-port units)</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🏪</div>
+                                <div class="spec-details">
+                                    <h4>Automated</h4>
+                                    <p>Vending & essentials</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🏡</div>
+                                <div class="spec-details">
+                                    <h4>800-1,000 sq ft</h4>
+                                    <p>Indoor climate control</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">📡</div>
+                                <div class="spec-details">
+                                    <h4>Remote Monitored</h4>
+                                    <p>By regional Basecamp</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="feature-list">
+                            <li>98% uptime guarantee</li>
+                            <li>Fully automated operation</li>
+                            <li>2 clean restrooms</li>
+                            <li>High-speed satellite Wi-Fi</li>
+                            <li>Compact solar infrastructure</li>
+                            <li>Predictive maintenance sensors</li>
+                            <li>~2 hour response from Basecamp</li>
+                            <li>~$30K/month revenue at maturity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="network-benefits-section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Regional Operational Excellence</h2>
+                <p>Our Basecamp-Waystation model delivers superior reliability through shared regional infrastructure</p>
+            </div>
+            
+            <div class="network-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>24/7 Network Monitoring</h3>
+                    <p>All Waystations monitored in real-time by regional Basecamp NOC:</p>
+                    <ul>
+                        <li>Continuous equipment status tracking</li>
+                        <li>Security camera feeds to NOC</li>
+                        <li>Real-time issue detection via Clockwork Energy</li>
+                        <li>Predictive maintenance reducing emergency repairs 50-70%</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Rapid Response Infrastructure</h3>
+                    <p>Mobile service teams stationed at each Basecamp provide:</p>
+                    <ul>
+                        <li>~2 hour response time to any Waystation</li>
+                        <li>Mobile response vehicle with tools & diagnostics</li>
+                        <li>95% parts availability at Basecamp inventory</li>
+                        <li>Faster repairs across the entire region</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Superior Economics</h3>
+                    <p>Regional cluster model delivers strong returns:</p>
+                    <ul>
+                        <li><strong>Cluster Revenue:</strong> $2.16M annually at maturity (1 Basecamp + 3 Waystations)</li>
+                        <li><strong>Payback Period:</strong> 36-42 months at 15% utilization</li>
+                        <li><strong>Total Cluster CapEx:</strong> $11-16M (blended $2.75-4M per site)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Strategic Partners</h2>
+                <p>Working with industry leaders to deliver reliability and performance you can count on.</p>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <h4><a href="https://chargemate.ai" target="_blank">ChargeMate</a></h4>
+                    <p>AI-powered driver support platform ensuring rapid assistance</p>
+                </div>
+                <div class="partner-card">
+                    <h4><a href="https://clockwork.energy" target="_blank">Clockwork Energy</a></h4>
+                    <p>Real-time equipment monitoring and predictive maintenance</p>
+                </div>
+                <div class="partner-card">
+                    <h4><a href="https://electrotempo.com" target="_blank">ElectroTempo</a></h4>
+                    <p>AI-driven demand forecasting and optimal site selection</p>
+                </div>
+                <div class="partner-card">
+                    <h4><a href="https://hywatts.com" target="_blank">HyWatts</a></h4>
+                    <p>Hybrid off-grid power systems with solar and battery storage</p>
+                </div>
+               <!--  <div class="partner-card">
+                    <h4><a href="https://kempower.com" target="_blank">Kempower</a></h4>
+                    <p>Satellite charging systems with industry-leading reliability</p>
+                </div> -->
+                <div class="partner-card">
+                    <h4><a href="https://www.renuteq.com/" target="_blank">ReNuTeq</a></h4>
+                    <p>Structural Engineered Bamboo canopies and EV charging frames</p>
+                </div>
+                <div class="partner-card">
+                    <h4><a href="https://truecompassusa.com/" target="_blank">True Compass</a></h4>
+                    <p>Top-10 nationally ranked DCFC installation contractor</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(245, 222, 179, 0.1); text-align: center;">
+                <h3 style="margin-bottom: 2rem; color: var(--golden-highway);">Accelerator Support</h3>
+                <div class="partner-card" style="max-width: 400px; margin: 0 auto;">
+                    <h4><a href="https://peachscore.com" target="_blank">Peachscore Accelerator</a></h4>
+                    <p>Cohort 23 • Strategic guidance and investor network access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="investment" id="investment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investment Opportunity</h2>
+                <p>Building America's premier scenic route charging network with proven hospitality DNA</p>
+            </div>
+            
+            <div class="investment-metrics">
+                <div class="metric-card">
+                    <div class="metric-number">$5M</div>
+                    <div class="metric-label">Pre-Seed Round</div>
+                    <div class="metric-detail">Advances 3 sites to shovel-ready status</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">36-42mo</div>
+                    <div class="metric-label">Cluster Payback</div>
+                    <div class="metric-detail">At conservative 15% utilization</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">$2.16M</div>
+                    <div class="metric-label">Annual Cluster Revenue</div>
+                    <div class="metric-detail">1 Basecamp + 3 Waystations at maturity</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">Q1-Q2 2027</div>
+                    <div class="metric-label">First Basecamp Live</div>
+                    <div class="metric-detail">Regional cluster operational</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://investors.rangeway.energy" target="_blank" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem; color: var(--mountain-charcoal);">View Investment Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem; font-size: 2.5rem;">Join the Electric Future</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: var(--ocean-deep);">
+                Get updates on new locations, early access benefits, and help shape our community raise.
+            </p>
+            
+            <div class="newsletter-grid">
+                <div class="newsletter-card">
+                    <h3>📬 Field Notes Newsletter</h3>
+                    <p>Get exclusive updates on network expansion, construction progress, and early access opportunities.</p>
+                    <a href="https://fieldnotes.rangeway.energy" target="_blank" class="btn-primary" style="background: var(--sunset-coral); color: var(--mountain-charcoal); display: block; text-align: center;">Subscribe Now</a>
+                </div>
+                
+                <div class="newsletter-card">
+                    <h3>💬 Community Raise Interest</h3>
+                    <p>Be first to know about our community investment opportunity. Priority access for early supporters.</p>
+                    <a href="https://invest.rangeway.energy" target="_blank" class="btn-primary" style="background: var(--sunset-coral); color: var(--mountain-charcoal); display: block; text-align: center;">Express Interest</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Rangeway Energy</h4>
+                <p>Premium EV charging for America's scenic routes.</p>
+                <p style="margin-top: 1rem;">Building the network EV travelers deserve.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Network</h4>
+                <a href="#network">Regional Clusters</a>
+                <a href="#experience">The Experience</a>
+                <a href="https://rangeway.app" target="_blank">Pathfinder Rewards</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#investment">Investment</a>
+                <a href="#partners">Partners</a>
+                <a href="mailto:hello@rangeway.energy">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>2661 Market Street STE 85787</p>
+                <p>San Francisco, CA 94114</p>
+                <p style="margin-top: 1rem;"><a href="tel:6504206300">(650) 420-6300</a></p>
+                <p><a href="mailto:hello@rangeway.energy">hello@rangeway.energy</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rangeway Energy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

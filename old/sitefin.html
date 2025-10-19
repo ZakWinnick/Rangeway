@@ -1,0 +1,218 @@
+import React from 'react';
+
+export default function ProformaSlide() {
+  return (
+    <div style={{
+      width: '1920px',
+      height: '1080px',
+      background: '#F5DEB3',
+      padding: '60px 80px',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      color: '#4A4A4A',
+      boxSizing: 'border-box'
+    }}>
+      
+      {/* Header */}
+      <div style={{ marginBottom: '40px' }}>
+        <h1 style={{ 
+          fontSize: '58px', 
+          fontWeight: '800', 
+          margin: '0 0 15px 0',
+          color: '#4A4A4A',
+          letterSpacing: '-0.02em'
+        }}>
+          Single Site Economics
+        </h1>
+        <p style={{ 
+          fontSize: '28px', 
+          margin: 0,
+          opacity: 0.8,
+          fontWeight: '500'
+        }}>
+          Path to 40%+ margins and $2M cumulative profit
+        </p>
+      </div>
+
+      {/* Main Grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '35px', marginBottom: '35px' }}>
+        
+        {/* Left Column - Revenue */}
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.95)',
+          borderRadius: '20px',
+          padding: '35px',
+          boxShadow: '0 10px 40px rgba(0,0,0,0.1)'
+        }}>
+          <h2 style={{ 
+            fontSize: '32px', 
+            fontWeight: '700', 
+            margin: '0 0 25px 0',
+            color: '#F09060'
+          }}>
+            💰 Revenue Growth
+          </h2>
+          
+          <div style={{ marginBottom: '25px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '12px' }}>
+              <span style={{ fontSize: '24px', fontWeight: '600' }}>Year 1</span>
+              <span style={{ fontSize: '38px', fontWeight: '800', color: '#F09060' }}>$1.16M</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+              <span style={{ fontSize: '24px', fontWeight: '600' }}>Year 5</span>
+              <span style={{ fontSize: '38px', fontWeight: '800', color: '#F09060' }}>$1.30M</span>
+            </div>
+          </div>
+
+          <div style={{ 
+            background: '#FFE4C4', 
+            padding: '18px', 
+            borderRadius: '12px',
+            marginBottom: '20px'
+          }}>
+            <div style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>5-Year Total: $6.14M</div>
+            <div style={{ fontSize: '16px', opacity: 0.8 }}>3% annual growth</div>
+          </div>
+
+          <div style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Revenue Mix (Year 3):</div>
+          <div style={{ fontSize: '15px', lineHeight: '1.7' }}>
+            ⚡ Charging: 89% ($1.08M)<br/>
+            📺 Digital Ads: 2% ($18K)<br/>
+            🌱 LCFS Credits: 10% ($123K)
+          </div>
+        </div>
+
+        {/* Right Column - Profitability */}
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.95)',
+          borderRadius: '20px',
+          padding: '35px',
+          boxShadow: '0 10px 40px rgba(0,0,0,0.1)'
+        }}>
+          <h2 style={{ 
+            fontSize: '32px', 
+            fontWeight: '700', 
+            margin: '0 0 25px 0',
+            color: '#2C5F7C'
+          }}>
+            📊 Net Income Ramp
+          </h2>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px', marginBottom: '25px' }}>
+            {[
+              { year: 'Y1', income: '$67K', margin: '5.8%' },
+              { year: 'Y2', income: '$295K', margin: '24.8%' },
+              { year: 'Y3', income: '$524K', margin: '42.8%' },
+              { year: 'Y4', income: '$543K', margin: '43.0%' },
+              { year: 'Y5', income: '$564K', margin: '43.2%' }
+            ].map((item, i) => (
+              <div key={i} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '14px', fontWeight: '600', marginBottom: '6px', opacity: 0.7 }}>{item.year}</div>
+                <div style={{ fontSize: '20px', fontWeight: '800', color: '#2C5F7C', marginBottom: '4px' }}>{item.income}</div>
+                <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.margin}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ 
+            background: '#E8F4F8', 
+            padding: '20px', 
+            borderRadius: '12px',
+            marginTop: '18px'
+          }}>
+            <div style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>🎯 Key Milestones</div>
+            <div style={{ fontSize: '15px', lineHeight: '1.8' }}>
+              ✅ Year 1: Cash flow positive<br/>
+              ✅ Year 3: Equipment paid off<br/>
+              ✅ Year 3-5: 40%+ margins<br/>
+              ✅ 5-Year: $2.0M cumulative profit
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Highlights */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '25px', marginBottom: '30px' }}>
+        {[
+          { metric: '36-42 mo', label: 'Payback Period' },
+          { metric: '8.4x', label: 'Income Growth (Y1→Y5)' },
+          { metric: '35% OpEx', label: 'Savings vs. Standalone' },
+          { metric: '30%+ IRR', label: 'Cluster Returns' }
+        ].map((item, i) => (
+          <div key={i} style={{
+            background: 'rgba(255, 255, 255, 0.95)',
+            borderRadius: '16px',
+            padding: '25px',
+            textAlign: 'center',
+            boxShadow: '0 8px 30px rgba(0,0,0,0.08)'
+          }}>
+            <div style={{ fontSize: '34px', fontWeight: '800', color: '#F09060', marginBottom: '8px' }}>
+              {item.metric}
+            </div>
+            <div style={{ fontSize: '15px', fontWeight: '600', opacity: 0.8 }}>
+              {item.label}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Assumptions Section */}
+      <div style={{
+        background: 'rgba(74, 74, 74, 0.95)',
+        color: 'white',
+        borderRadius: '16px',
+        padding: '25px 35px',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '40px'
+      }}>
+        {/* Revenue Assumptions */}
+        <div>
+          <h3 style={{ 
+            fontSize: '20px', 
+            fontWeight: '700', 
+            margin: '0 0 15px 0',
+            color: '#FFB366'
+          }}>
+            Revenue Assumptions
+          </h3>
+          <div style={{ fontSize: '14px', lineHeight: '1.9', opacity: 0.95 }}>
+            • Single site with 4 × 350kW chargers<br/>
+            • 4 hours daily utilization per charger<br/>
+            • Retail rate: $0.50/kWh<br/>
+            • LCFS credits: $0.06/kWh<br/>
+            • Advertising: 30% inventory sold at $6 CPM
+          </div>
+        </div>
+
+        {/* Cost Assumptions */}
+        <div>
+          <h3 style={{ 
+            fontSize: '20px', 
+            fontWeight: '700', 
+            margin: '0 0 15px 0',
+            color: '#FFB366'
+          }}>
+            Cost Assumptions
+          </h3>
+          <div style={{ fontSize: '14px', lineHeight: '1.9', opacity: 0.95 }}>
+            • Electricity: $0.20/kWh<br/>
+            • CapEx: 18-month fixed loan at 10%<br/>
+            • Land & building: 15-year mortgage at 5.8%<br/>
+            • OpEx & SG&A: 20% of gross charging revenue
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Note */}
+      <div style={{ 
+        marginTop: '20px', 
+        fontSize: '13px', 
+        opacity: 0.7, 
+        fontStyle: 'italic',
+        textAlign: 'center'
+      }}>
+        Conservative baseline: 15% utilization • 40-60% solar offset • Hub-satellite operational model
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Economics Charts</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 40px;
+            margin: 0;
+        }
+        
+        .chart-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .chart-box {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            color: #F09060;
+            font-size: 24px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #3a3a3a;
+        }
+        
+        .metric-label {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .metric-value {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            color: #F09060;
+            font-size: 20px;
+        }
+        
+        .payback-visual {
+            margin-top: 20px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
+        
+        .payback-bar {
+            height: 40px;
+            background: linear-gradient(90deg, #F09060 0%, #FFB366 100%);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payback-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+        
+        .margin-chart {
+            margin-top: 30px;
+        }
+        
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            height: 200px;
+            gap: 40px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
+        
+        .bar-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .bar {
+            width: 60px;
+            background: linear-gradient(180deg, #F09060 0%, #FFB366 100%);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            color: #F09060;
+        }
+        
+        .bar-label {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .basecamp-color {
+            background: #F09060;
+        }
+        
+        .trailhead-color {
+            background: #FFB366;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div class="chart-grid">
+            <!-- Basecamp Economics -->
+            <div class="chart-box">
+                <h2>Basecamp Economics</h2>
+                <div class="metrics-grid">
+                    <div class="metric-row">
+                        <span class="metric-label">CapEx</span>
+                        <span class="metric-value">$4-6M</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Monthly Revenue</span>
+                        <span class="metric-value highlight">$90K</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Monthly OpEx</span>
+                        <span class="metric-value">$35K</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Contribution Margin</span>
+                        <span class="metric-value highlight">61%</span>
+                    </div>
+                </div>
+                <div class="payback-visual">
+                    <div class="payback-bar" style="width: 100%;">
+                        <span class="payback-label">48-60 Month Payback</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trailhead Economics -->
+            <div class="chart-box">
+                <h2>Trailhead Economics</h2>
+                <div class="metrics-grid">
+                    <div class="metric-row">
+                        <span class="metric-label">CapEx</span>
+                        <span class="metric-value">$1.5-2.5M</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Monthly Revenue</span>
+                        <span class="metric-value highlight">$27K</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Monthly OpEx</span>
+                        <span class="metric-value">$8K</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Contribution Margin</span>
+                        <span class="metric-value highlight">70%</span>
+                    </div>
+                </div>
+                <div class="payback-visual">
+                    <div class="payback-bar" style="width: 60%;">
+                        <span class="payback-label">24-36 Month Payback</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Margin Evolution Chart -->
+        <div class="chart-box">
+            <h2>Network Margin Evolution</h2>
+            <div class="bar-chart">
+                <div class="bar-group">
+                    <div class="bar" style="height: 45%;">
+                        <span class="bar-value">45%</span>
+                    </div>
+                    <span class="bar-label">Year 1</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 55%;">
+                        <span class="bar-value">55%</span>
+                    </div>
+                    <span class="bar-label">Year 2</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 62%;">
+                        <span class="bar-value">62%</span>
+                    </div>
+                    <span class="bar-label">Year 3</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 68%;">
+                        <span class="bar-value">68%</span>
+                    </div>
+                    <span class="bar-label">Year 4</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 70%;">
+                        <span class="bar-value">70%</span>
+                    </div>
+                    <span class="bar-label">Year 5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color basecamp-color"></div>
+                <span>Basecamp</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color trailhead-color"></div>
+                <span>Trailhead</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

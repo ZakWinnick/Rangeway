@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangeway Energy Marketing & Brand Playbook v3.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #4A4A4A;
+            background-color: #FAFAFA;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        /* Sidebar TOC */
+        .sidebar {
+            width: 320px;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            background: linear-gradient(135deg, #F09060 0%, #FFB366 100%);
+            padding: 30px 20px;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar h1 {
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: 0.05em;
+        }
+        
+        .sidebar .version {
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .toc {
+            list-style: none;
+        }
+        
+        .toc > li {
+            margin-bottom: 15px;
+        }
+        
+        .toc a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .toc a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+        
+        .toc .sub-item {
+            margin-top: 8px;
+            padding-left: 15px;
+        }
+        
+        .toc .sub-item a {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.95);
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: 320px;
+            padding: 50px 60px;
+            flex: 1;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #F5DEB3 0%, #FFE4C4 100%);
+            border-radius: 12px;
+            margin-bottom: 60px;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            color: #4A4A4A;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: 0.08em;
+        }
+        
+        .header .subtitle {
+            font-size: 18px;
+            color: #2C5F7C;
+            font-weight: 600;
+        }
+        
+        section {
+            margin-bottom: 80px;
+            scroll-margin-top: 20px;
+        }
+        
+        h2 {
+            color: #F09060;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #FFB366;
+        }
+        
+        h3 {
+            color: #2C5F7C;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+        }
+        
+        h4 {
+            color: #4A4A4A;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+        }
+        
+        h5 {
+            color: #2C5F7C;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 25px 0 10px 0;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #4A4A4A;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        strong {
+            color: #2C5F7C;
+            font-weight: 600;
+        }
+        
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin: 10px 15px 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            vertical-align: top;
+        }
+        
+        .color-info {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+        
+        .color-group {
+            margin: 30px 0;
+            padding: 20px;
+            background: #F5F5F5;
+            border-radius: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #F09060;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        
+        tr:hover {
+            background: #F5DEB3;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #FFF5EB 0%, #FFE4C4 100%);
+            border-left: 5px solid #F09060;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .note-box {
+            background: #E8F4F8;
+            border-left: 5px solid #2C5F7C;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+        
+        .warning-box {
+            background: #FFF3E0;
+            border-left: 5px solid #FFB366;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+        
+        code {
+            background: #F5F5F5;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            color: #2C5F7C;
+        }
+        
+        pre {
+            background: #2C5F7C;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        pre code {
+            background: transparent;
+            color: white;
+            padding: 0;
+        }
+        
+        .footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            border-top: 3px solid #FFB366;
+            text-align: center;
+            color: #B8B8B8;
+        }
+        
+        .footer strong {
+            color: #4A4A4A;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 280px;
+            }
+            .main-content {
+                margin-left: 280px;
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 32px;
+            }
+        }
+        
+        .emoji {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h1>RANGEWAY</h1>
+            <div class="version">Marketing & Brand Playbook v3.0</div>
+            
+            <ul class="toc">
+                <li><a href="#part1">Part 1: Brand Foundation</a></li>
+                <li><a href="#part2">Part 2: Visual Identity System</a>
+                    <ul class="sub-item">
+                        <li><a href="#logo">Logo Elements</a></li>
+                        <li><a href="#colors">Brand Colors</a></li>
+                        <li><a href="#typography">Typography</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part3">Part 3: Strategic Positioning</a></li>
+                <li><a href="#part4">Part 4: Marketing Strategy</a></li>
+                <li><a href="#part5">Part 5: Messaging Framework</a></li>
+                <li><a href="#part6">Part 6: Customer Journey</a></li>
+                <li><a href="#part7">Part 7: Channel Strategy</a></li>
+                <li><a href="#part8">Part 8: B2B Marketing</a></li>
+                <li><a href="#part9">Part 9: Campaign Frameworks</a></li>
+                <li><a href="#part10">Part 10: Content Guidelines</a></li>
+                <li><a href="#part11">Part 11: Metrics & Analytics</a></li>
+                <li><a href="#part12">Part 12: Crisis Communication</a></li>
+                <li><a href="#part13">Part 13: Budget & Resources</a></li>
+                <li><a href="#part14">Part 14: Technology Stack</a></li>
+                <li><a href="#part15">Part 15: Implementation</a></li>
+                <li><a href="#part16">Part 16: Competitive Intelligence</a></li>
+                <li><a href="#appendices">Appendices</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <div class="header">
+                <h1>RANGEWAY ENERGY</h1>
+                <div class="subtitle">Marketing & Brand Playbook v3.0 | October 2025</div>
+            </div>
+
+            <section id="part1">
+                <h2>Part 1: Brand Foundation</h2>
+                
+                <h3>Brand Essence</h3>
+                
+                <h4>Core Purpose</h4>
+                <div class="highlight-box">
+                    <strong>"Where charging becomes part of your journey"</strong>
+                    <p>Rangeway transforms necessary charging stops into memorable moments along America's most iconic routes. We're not infrastructure providers—we're journey enablers.</p>
+                </div>
+                
+                <h4>Mission</h4>
+                <p>Enable electric tourism through premium charging destinations that make the journey as memorable as the destination.</p>
+                
+                <h4>Vision</h4>
+                <p>Become the definitive charging network for America's scenic routes, where drivers choose us not just for power, but for the experience.</p>
+                
+                <h4>Brand Promise</h4>
+                <p>Indoor comfort at every location. Premium experiences on America's scenic highways. Reliability you can count on.</p>
+            </section>
+
+            <section id="part2">
+                <h2>Part 2: Visual Identity System</h2>
+                
+                <h3 id="logo">Logo Elements</h3>
+                
+                <h4>Icon Components</h4>
+                <p>The Rangeway icon captures the essence of scenic journey experiences:</p>
+                <ul>
+                    <li><strong>Mountain Silhouette</strong>: Represents America's diverse landscapes from coastal ranges to mountain passes</li>
+                    <li><strong>Winding Path</strong>: Dual meaning—the road's journey and flowing natural elements</li>
+                    <li><strong>Sun</strong>: Golden hour optimism, warmth, and solar power</li>
+                    <li><strong>Rounded Square Format</strong>: Modern, app-friendly, approachable</li>
+                </ul>
+                
+                <h4>Logo Variations</h4>
+                <ul>
+                    <li><strong>Icon Only</strong>: For app icons, social media profiles, wayfinding markers</li>
+                    <li><strong>Icon + Wordmark</strong>: Primary lockup for most applications</li>
+                    <li><strong>Wordmark Only</strong>: For horizontal space constraints</li>
+                </ul>
+                
+                <h3 id="colors">Brand Colors</h3>
+                
+                <h4>Primary Palette</h4>
+                
+                <div class="color-group">
+                    <h5>Sunset Coral</h5>
+                    <div class="color-swatch" style="background-color: #F09060;"></div>
+                    <div class="color-info">
+                        <p><strong>Hex:</strong> #F09060<br>
+                        <strong>RGB:</strong> 240, 144, 96<br>
+                        <strong>Usage:</strong> Primary brand color, backgrounds, warmth<br>
+                        <strong>Represents:</strong> Golden hour, American landscapes, premium positioning</p>
+                    </div>
+                </div>
+                
+                <div class="color-group">
+                    <h5>Golden Highway</h5>
+                    <div class="color-swatch" style="background-color: #FFB366;"></div>
+                    <div class="color-info">
+                        <p><strong>Hex:</strong> #FFB366<br>
+                        <strong>RGB:</strong> 255, 179, 102<br>
+                        <strong>Usage:</strong> Accent, sun icon, path element, CTAs<br>
+                        <strong>Represents:</strong> Optimism, energy, solar power, the journey</p>
+                    </div>
+                </div>
+                
+                <div class="color-group">
+                    <h5>Mountain Charcoal</h5>
+                    <div class="color-swatch" style="background-color: #4A4A4A;"></div>
+                    <div class="color-info">
+                        <p><strong>Hex:</strong> #4A4A4A<br>
+                        <strong>RGB:</strong> 74, 74, 74<br>
+                        <strong>Usage:</strong> Typography, mountain icon, grounding element<br>
+                        <strong>Represents:</strong> Strength, reliability, sophistication</p>
+                    </div>
+                </div>
+                
+                <h4>Supporting Palette</h4>
+                
+                <div class="color-group">
+                    <h5>Coastal Cream</h5>
+                    <div class="color-swatch" style="background-color: #F5DEB3;"></div>
+                    <div class="color-info">
+                        <p><strong>Hex:</strong> #F5DEB3<br>
+                        <strong>RGB:</strong> 245, 222, 179<br>
+                        <strong>Usage:</strong> Light backgrounds, alternate layouts<br>
+                        <strong>Represents:</strong> Warmth, accessibility, natural tones</p>
+                    </div>
+                </div>
+                
+                <div class="color-group">
+                    <h5>Ocean Deep</h5>
+                    <div class="color-swatch" style="background-color: #2C5F7C;"></div>
+                    <div class="color-info">
+                        <p><strong>Hex:</strong> #2C5F7C<br>
+                        <strong>RGB:</strong> 44, 95, 124<br>
+                        <strong>Usage:</strong> Secondary accent, hyperlinks, wayfinding<br>
+                        <strong>Represents:</strong> Depth, trust, stability</p>
+                    </div>
+                </div>
+                
+                <div class="color-group">
+                    <h5>Fog Gray</h5>
+                    <div class="color-swatch" style="background-color: #B8B8B8;"></div>
+                    <div class="color-info">
+                        <p><strong>Hex:</strong> #B8B8B8<br>
+                        <strong>RGB:</strong> 184, 184, 184<br>
+                        <strong>Usage:</strong> Secondary text, dividers, subtle elements<br>
+                        <strong>Represents:</strong> Sophistication, neutrality</p>
+                    </div>
+                </div>
+                
+                <h3 id="typography">Typography</h3>
+                
+                <h4>Wordmark</h4>
+                <ul>
+                    <li><strong>Font:</strong> Bold sans-serif (Montserrat Bold or Raleway Bold)</li>
+                    <li><strong>Weight:</strong> 700-800</li>
+                    <li><strong>Tracking:</strong> Generous (approximately 0.08em)</li>
+                    <li><strong>Case:</strong> All capitals for wordmark</li>
+                </ul>
+                
+                <h4>Recommended Type System</h4>
+                <ul>
+                    <li><strong>Headlines:</strong> Same as wordmark font family, various weights</li>
+                    <li><strong>Body Copy:</strong> Clean sans-serif (Source Sans Pro, Open Sans, or similar)</li>
+                    <li><strong>Wayfinding:</strong> High-legibility sans-serif (Fira Sans, Roboto)</li>
+                    <li><strong>Digital:</strong> System fonts for fast loading, branded fonts for key moments</li>
+                </ul>
+                
+                <h4>Logo Usage Guidelines</h4>
+                
+                <h5>Clear Space</h5>
+                <ul>
+                    <li>Minimum clear space = height of the "R" in RANGEWAY</li>
+                    <li>Icon should have clear space equal to 25% of its width on all sides</li>
+                </ul>
+                
+                <h5>Minimum Sizes</h5>
+                <ul>
+                    <li>Icon only: 32px digital, 0.5" print</li>
+                    <li>Full logo: 120px digital, 1.5" print</li>
+                    <li>Wordmark only: 80px digital, 1" print</li>
+                </ul>
+                
+                <h5>Color Applications</h5>
+                <ul>
+                    <li><strong>Primary:</strong> Sunset Coral background with Mountain Charcoal elements</li>
+                    <li><strong>Reversed:</strong> White logo on dark backgrounds</li>
+                    <li><strong>Monochrome:</strong> All Mountain Charcoal for single-color needs</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <h5>Incorrect Usage</h5>
+                    <ul>
+                        <li>❌ Don't alter the colors outside brand palette</li>
+                        <li>❌ Don't rotate or skew the logo</li>
+                        <li>❌ Don't separate the path from the mountain</li>
+                        <li>❌ Don't add effects (shadows, gradients, outlines)</li>
+                        <li>❌ Don't change the typeface</li>
+                        <li>❌ Don't alter proportions</li>
+                    </ul>
+                </div>
+                
+                <h4>Motion Principles</h4>
+                <p>When animated, the logo should:</p>
+                <ul>
+                    <li><strong>Sun:</strong> Gentle rise or glow</li>
+                    <li><strong>Path:</strong> Draw in from left to right (journey motion)</li>
+                    <li><strong>Mountain:</strong> Remain stable (reliability)</li>
+                    <li><strong>Overall:</strong> Smooth, confident transitions (no bouncing or playful movements)</li>
+                </ul>
+                
+                <h4>Photography Style</h4>
+                <ul>
+                    <li>Golden hour shots along America's scenic corridors</li>
+                    <li>Authentic moments with real drivers (not models)</li>
+                    <li>Vehicles in context of diverse landscapes (coast, mountains, desert, forest)</li>
+                    <li>Details that show craftsmanship</li>
+                    <li>People enjoying amenities naturally</li>
+                    <li>Color grade toward warm sunset tones when appropriate</li>
+                    <li>Inclusive representation across age, ethnicity, vehicle type, and travel style</li>
+                </ul>
+            </section>
+
+            <section id="part3">
+                <h2>Part 3: Strategic Positioning</h2>
+                
+                <h3>Market Position</h3>
+                
+                <h4>Our Category: Premium Scenic Corridor Charging</h4>
+                <p>Rangeway creates a new category at the intersection of electric mobility and experiential travel. We don't compete on price or ubiquity—we compete on experience and reliability in our chosen markets.</p>
+                
+                <div class="highlight-box">
+                    <h4>The White Space We Own</h4>
+                    <p>While competitors focus on urban convenience or highway coverage, Rangeway dominates premium scenic corridor charging with guaranteed indoor comfort and hospitality-grade experiences.</p>
+                </div>
+                
+                <h4>Competitive Landscape</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Network</th>
+                            <th>Position</th>
+                            <th>Gap We Fill</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tesla Supercharger</td>
+                            <td>Technology & scale</td>
+                            <td>Premium amenities, non-Tesla access</td>
+                        </tr>
+                        <tr>
+                            <td>Electrify America</td>
+                            <td>Coverage & speed</td>
+                            <td>Indoor comfort, reliability</td>
+                        </tr>
+                        <tr>
+                            <td>EVgo</td>
+                            <td>Urban convenience</td>
+                            <td>Scenic corridor focus</td>
+                        </tr>
+                        <tr>
+                            <td>ChargePoint</td>
+                            <td>Network size</td>
+                            <td>DCFC density, experience</td>
+                        </tr>
+                        <tr>
+                            <td>Gas Station Chargers</td>
+                            <td>Accessibility</td>
+                            <td>Purpose-built for EV dwell times</td>
+                        </tr>
+                        <tr style="background: #FFF5EB;">
+                            <td><strong>Rangeway</strong></td>
+                            <td><strong>Journey & Experience</strong></td>
+                            <td><strong>Category creator</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Value Proposition Framework</h3>
+                <p><strong>For</strong> EV drivers taking scenic road trips</p>
+                <p><strong>Who need</strong> reliable fast charging with comfortable amenities during 20-40 minute charging sessions</p>
+                <p><strong>Rangeway is</strong> the premium charging network that provides climate-controlled indoor lounges, quality food and beverage, and premium facilities at every location</p>
+                <p><strong>That delivers</strong> the only network guaranteeing indoor comfort at every site, whether you're at a full-service Basecamp or an automated Waystation</p>
+                <p><strong>Unlike</strong> parking lot chargers that leave you exposed to weather with minimal amenities</p>
+                <p><strong>We provide</strong> a hospitality-first experience that makes charging stops part of your journey, not just a logistics burden</p>
+                
+                <h3>Differentiation Strategy</h3>
+                <div class="note-box">
+                    <h4>Three Pillars of Differentiation:</h4>
+                    <ol>
+                        <li><strong>Location Excellence:</strong> Prime scenic corridor real estate with views and regional character</li>
+                        <li><strong>Experience Guarantee:</strong> Climate-controlled indoor comfort at 100% of locations (industry-first)</li>
+                        <li><strong>Operational Model:</strong> Regional Basecamps support nearby Waystations for consistent quality and rapid response</li>
+                    </ol>
+                </div>
+                
+                <h3>Brand Personality</h3>
+                
+                <h4>What We Are:</h4>
+                <ul>
+                    <li>Thoughtful and intentional</li>
+                    <li>Welcoming and warm</li>
+                    <li>Reliable and professional</li>
+                    <li>Connected to place and community</li>
+                    <li>Adventure-enabling</li>
+                </ul>
+                
+                <h4>What We're Not:</h4>
+                <ul>
+                    <li>Transactional or purely utilitarian</li>
+                    <li>Tech-forward at the expense of humanity</li>
+                    <li>Standardized without local character</li>
+                    <li>Luxury/exclusive (premium ≠ elitist)</li>
+                </ul>
+            </section>
+
+            <section id="part4">
+                <h2>Part 4: Marketing Strategy Framework</h2>
+                
+                <h3>Growth Stage Positioning</h3>
+                <p>Based on Theo Reichelt's CPO growth model, Rangeway is transitioning from <strong>Foundation Stage</strong> to <strong>Growth Stage</strong>:</p>
+                
+                <h4>Current Phase: Foundation → Growth (Late 2025 - 2026)</h4>
+                
+                <h5>Foundation Stage Priorities (Continuing)</h5>
+                <ul>
+                    <li>Establish brand presence before full network deployment</li>
+                    <li>Build data quality foundation for discoverability</li>
+                    <li>Create community of early advocates</li>
+                    <li>Develop strategic partnerships</li>
+                </ul>
+                
+                <h5>Growth Stage Priorities (Emerging)</h5>
+                <ul>
+                    <li>Drive utilization through proven experiences</li>
+                    <li>Scale Pathfinder Rewards loyalty program</li>
+                    <li>Activate user-generated content campaigns</li>
+                    <li>Expand B2B partnerships regionally</li>
+                </ul>
+                
+                <h3>Marketing Priorities by Phase</h3>
+                
+                <h4>Q4 2025: Pre-Launch Foundation</h4>
+                
+                <h5>1. Digital Presence First</h5>
+                <ul>
+                    <li>Launch brand 6 months before first charger goes live</li>
+                    <li>Build Instagram/YouTube following with scenic route content</li>
+                    <li>Partner with EV clubs and adventure travel communities</li>
+                    <li>Leverage founder's 1,000+ member Bay Area Rivian Club network</li>
+                </ul>
+                
+                <h5>2. Perfect Data Foundation</h5>
+                <ul>
+                    <li>Ensure 100% accurate coordinates in Google/Apple Maps</li>
+                    <li>Partner with data enrichment services (Eco Movement, Gireve)</li>
+                    <li>Create distinctive location names: "[Region] Basecamp by Rangeway"</li>
+                    <li>Integrate with all major charging apps via OCPI</li>
+                </ul>
+                
+                <h5>3. Community Building</h5>
+                <ul>
+                    <li>Host preview events at future site locations</li>
+                    <li>Launch "Rangeway Pioneers" early access program</li>
+                    <li>Activate regional tourism board partnerships</li>
+                    <li>Engage EV owner groups across all brands</li>
+                </ul>
+                
+                <h4>Q1-Q4 2026: Launch & Learn</h4>
+                
+                <h5>1. Grand Opening Excellence</h5>
+                <ul>
+                    <li>Execute launch protocol for first Basecamp + Waystations</li>
+                    <li>Capture user testimonials and authentic content</li>
+                    <li>Build case studies from early adopters</li>
+                    <li>Iterate messaging based on customer language</li>
+                </ul>
+                
+                <h5>2. Utilization Growth</h5>
+                <ul>
+                    <li>Implement dynamic pricing and promotional campaigns</li>
+                    <li>Launch Pathfinder Rewards officially</li>
+                    <li>Scale successful partnership models</li>
+                    <li>Expand paid marketing based on proven channels</li>
+                </ul>
+                
+                <h5>3. Regional Expansion Preparation</h5>
+                <ul>
+                    <li>Announce pipeline of new locations</li>
+                    <li>Begin community building in expansion markets</li>
+                    <li>Develop region-specific marketing assets</li>
+                    <li>Recruit regional marketing coordinators</li>
+                </ul>
+            </section>
+
+            <section id="part5">
+                <h2>Part 5: Messaging Framework</h2>
+                
+                <div class="highlight-box">
+                    <h3>Core Messaging Hierarchy</h3>
+                    <h4>Never Lead With Technology</h4>
+                    <p>Following Theo Reichelt's proven methodology: benefits first, features second, specs only when asked.</p>
+                </div>
+                
+                <h4>Tier 1: Emotional Benefits (Always Lead)</h4>
+                <ul>
+                    <li>"15-minute scenic breaks worth taking"</li>
+                    <li>"Coffee with incredible views while you charge"</li>
+                    <li>"The charging stop other drivers recommend"</li>
+                    <li>"Where your road trip gets better, not longer"</li>
+                    <li>"Charging destinations as memorable as your destination"</li>
+                    <li>"Indoor comfort when the weather isn't cooperating"</li>
+                </ul>
+                
+                <h4>Tier 2: Functional Benefits (Support the Emotion)</h4>
+                <ul>
+                    <li>"Add 200 miles in the time it takes for a coffee and stretch"</li>
+                    <li>"Works every time, guaranteed—or your session is free"</li>
+                    <li>"Find us in every app you already use"</li>
+                    <li>"Real food, clean facilities, comfortable seating"</li>
+                    <li>"Climate-controlled comfort whether it's foggy, windy, or hot"</li>
+                    <li>"Regional support teams respond within 2 hours"</li>
+                </ul>
+                
+                <h4>Tier 3: Technical Specifications (Only When Asked)</h4>
+                <ul>
+                    <li>"Up to 350kW true power to every port"</li>
+                    <li>"Solar + battery backup systems"</li>
+                    <li>"NACS and CCS compatible"</li>
+                    <li>"99% uptime commitment at Basecamps, 98% at Waystations"</li>
+                    <li>"Kempower Satellite charging architecture"</li>
+                    <li>"OCPI-integrated for universal app compatibility"</li>
+                </ul>
+                
+                <h3>Location-Specific Messaging</h3>
+                
+                <div class="color-group">
+                    <h4>Basecamps (Full-Service Regional Hubs)</h4>
+                    <p><strong>Headline:</strong> "Your scenic highway home base"</p>
+                    <p><strong>Supporting Message:</strong> "Recharge while you refresh—staffed service, full café, and premium comfort during your journey"</p>
+                    <p><strong>Proof Points:</strong> "6-8 ultra-fast chargers, full café with local roasters, 2,500+ sq ft climate-controlled lounge, premium restrooms, regional maintenance center"</p>
+                    <p><strong>Perfect For:</strong> Destination travelers, families, remote workers, anyone seeking extended comfort with full amenities</p>
+                </div>
+                
+                <div class="color-group">
+                    <h4>Waystations (Automated Highway Outposts)</h4>
+                    <p><strong>Headline:</strong> "Quick comfort on the road"</p>
+                    <p><strong>Supporting Message:</strong> "Fast charge, grab refreshments, stay comfortable—all automated for your convenience"</p>
+                    <p><strong>Proof Points:</strong> "4 ultra-fast chargers, 800-1,000 sq ft climate-controlled lounge, automated vending, clean restrooms, 24/7 remote monitoring"</p>
+                    <p><strong>Perfect For:</strong> Through-travelers, quick top-ups, time-conscious drivers needing 15-30 minutes</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Industry-First Differentiator</h3>
+                    <h4>Always Emphasize:</h4>
+                    <p>"The only network guaranteeing climate-controlled indoor comfort at EVERY location"</p>
+                    <p>This is our category-defining advantage. While competitors leave drivers exposed to weather in parking lots, Rangeway provides premium indoor experiences whether you're at a staffed Basecamp or an automated Waystation.</p>
+                </div>
+                
+                <h3>Tagline & Elevator Pitches</h3>
+                
+                <h4>Primary Tagline</h4>
+                <p><strong>"Where charging becomes part of your journey"</strong></p>
+                
+                <h4>30-Second Pitch</h4>
+                <p>"Rangeway Energy builds premium EV charging destinations along America's scenic highways. Unlike parking lot chargers, we guarantee climate-controlled indoor lounges with quality amenities at every location—whether it's a full-service Basecamp with café and staff, or an automated Waystation. We're making scenic road trips in EVs not just possible, but preferable."</p>
+                
+                <h4>60-Second Pitch</h4>
+                <p>"Rangeway Energy is redefining EV charging for scenic road trips. We build two types of locations: full-service Basecamps with staffed operations, regional maintenance centers, and premium café experiences; and automated Waystations offering climate-controlled comfort without on-site staff. Our regional model means Basecamps support nearby Waystations with 2-hour response times and 24/7 monitoring. We're the only network guaranteeing indoor comfort at every location—no more standing in parking lots during 30-minute charges. We're targeting America's most scenic corridors where driving is part of the destination, not just transportation."</p>
+            </section>
+
+            <section id="part6">
+                <h2>Part 6: Customer Journey Marketing</h2>
+                
+                <h3>The Five Stages</h3>
+                
+                <h4>1. Discovery: "I need charging on scenic routes"</h4>
+                
+                <p><strong>Customer Mindset:</strong> Planning a road trip, researching charging options, concerned about infrastructure gaps on scenic highways</p>
+                
+                <p><strong>Marketing Tactics:</strong></p>
+                <ul>
+                    <li>SEO content: "Best EV charging for [Route 66/Blue Ridge Parkway/Pacific Coast Highway]"</li>
+                    <li>Appear in all navigation apps (Google Maps, Apple Maps, ABRP, PlugShare)</li>
+                    <li>Partner content with regional tourism boards</li>
+                    <li>Social proof from early users and influencers</li>
+                    <li>Geographic-specific landing pages for major scenic corridors</li>
+                    <li>YouTube content: "Complete guide to EV charging on [scenic route]"</li>
+                </ul>
+                
+                <h4>2. Consideration: "Which charger should I choose?"</h4>
+                
+                <p><strong>Customer Mindset:</strong> Comparing options, evaluating reliability and experience, concerned about being stranded</p>
+                
+                <p><strong>Differentiators to Emphasize:</strong></p>
+                <ul>
+                    <li>"The only network built FOR scenic routes"</li>
+                    <li>"Guaranteed indoor comfort at every location"</li>
+                    <li>"Staffed Basecamps and automated Waystations—reliability at both"</li>
+                    <li>"Guaranteed to work or your session is free"</li>
+                    <li>"99% uptime at Basecamps, 98% at Waystations"</li>
+                    <li>User reviews (target 4.8+ stars) and authentic photos</li>
+                    <li>Side-by-side comparisons showing our advantage</li>
+                </ul>
+                
+                <h4>3. Arrival: "This is actually nice"</h4>
+                
+                <p><strong>Customer Mindset:</strong> First impressions matter, comparing reality to expectations, forming initial brand opinion</p>
+                
+                <p><strong>On-Site Experience Elements:</strong></p>
+                <ul>
+                    <li>Clear wayfinding signage from highway</li>
+                    <li>Welcome messaging on charger screens with personalization</li>
+                    <li>Ambient brand touches (curated music, natural materials, regional character)</li>
+                    <li>Staff wearing "Trailkeeper" badges at Basecamps (not "technicians")</li>
+                    <li>Intuitive wayfinding and signage at automated Waystations</li>
+                    <li>Branded photo opportunities with scenic backdrops</li>
+                    <li>QR codes for instant app download and account creation</li>
+                </ul>
+                
+                <h4>4. Charging: "I could stay longer"</h4>
+                
+                <p><strong>Customer Mindset:</strong> Looking for ways to fill dwell time, forming memories and stories, deciding if they'll return</p>
+                
+                <p><strong>Engagement Tactics:</strong></p>
+                <ul>
+                    <li>Push notification: "You're at 80%. Your coffee's on us after 10 visits"</li>
+                    <li>Instagram-worthy moments: Branded photo spots with scenic views</li>
+                    <li>Local discovery: "While you charge" recommendations for nearby attractions within 5-minute walk</li>
+                    <li>Real-time charging updates without anxiety-inducing language</li>
+                    <li>Tourism partnership QR codes for local attractions</li>
+                    <li>Digital screens showing route recommendations and regional highlights</li>
+                    <li>At Basecamps: Staff proactively checking in, offering recommendations</li>
+                </ul>
+                
+                <h4>5. Advocacy: "You have to stop at Rangeway"</h4>
+                
+                <p><strong>Customer Mindset:</strong> Had a surprisingly good experience, wants to share, looking for rewards for referrals</p>
+                
+                <p><strong>Activation Methods:</strong></p>
+                <ul>
+                    <li>Share incentives: "Share your #RangewayMoment for 10% off next session"</li>
+                    <li>Referral rewards: "Give $10 charging credit, get $10 credit"</li>
+                    <li>User-generated content campaigns with monthly prizes</li>
+                    <li>Community meetups and events at Basecamps</li>
+                    <li>"Rangeway Moments" social series featuring real customers</li>
+                    <li>VIP experiences for top advocates (Pioneer tier and above)</li>
+                    <li>"Ambassador" program for enthusiastic community members</li>
+                </ul>
+            </section>
+
+            <section id="part7">
+                <h2>Part 7: Channel Strategy</h2>
+                
+                <h3>Digital Marketing Channels</h3>
+                
+                <div class="note-box">
+                    <h4>Content Distribution (60/30/10 Rule)</h4>
+                    <ul>
+                        <li>60% Journey Content: Scenic routes, destinations, travel tips across America</li>
+                        <li>30% Community Content: Driver stories, local partnerships, events</li>
+                        <li>10% Product Content: New sites, features, updates, behind-the-scenes</li>
+                    </ul>
+                </div>
+                
+                <h4>Instagram/Threads (Primary Platform)</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Visual storytelling and community building</li>
+                    <li><strong>Content:</strong> Daily scenic corridor beauty shots (rotate regions), Reels: "Charge and explore [region]" series, Stories: Real-time site updates and driver experiences</li>
+                    <li><strong>Posting Frequency:</strong> 1 feed post daily, 3-5 stories daily, 3-4 reels weekly</li>
+                    <li><strong>Growth Target:</strong> 50,000 followers by end of Year 1</li>
+                </ul>
+                
+                <h4>YouTube</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Long-form education and SEO</li>
+                    <li><strong>Content:</strong> "America's Scenic Routes EV Guide" series, Shorts: "60-second charging stops", Partner collaborations with EV influencers, Behind-the-scenes: Site construction</li>
+                    <li><strong>Posting Frequency:</strong> 2 long-form videos monthly, 4 shorts weekly</li>
+                    <li><strong>Growth Target:</strong> 10,000 subscribers by end of Year 1</li>
+                </ul>
+                
+                <h4>TikTok</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Reach younger EV adopters and create viral moments</li>
+                    <li><strong>Content:</strong> Short-form scenic content, behind-the-scenes construction, driver testimonials, "Day in the life" of Trailkeepers, regional highlights and hidden gems</li>
+                    <li><strong>Posting Frequency:</strong> 5-7 posts weekly</li>
+                    <li><strong>Growth Target:</strong> 25,000 followers by end of Year 1</li>
+                </ul>
+                
+                <h4>LinkedIn</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> B2B relationships and industry leadership</li>
+                    <li><strong>Content:</strong> Partnership announcements, thought leadership on scenic charging infrastructure, investor updates and milestones, industry insights and trends</li>
+                    <li><strong>Posting Frequency:</strong> 3 posts weekly</li>
+                    <li><strong>Growth Target:</strong> 5,000 followers by end of Year 1</li>
+                </ul>
+                
+                <h4>Email/SMS</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Direct communication with members and prospects</li>
+                    <li><strong>Segments:</strong> Prospects, Explorers, Voyagers, Pioneers, Trailblazers, B2B contacts</li>
+                    <li><strong>Content:</strong> Journey planning tips by region, Pathfinder Rewards updates, site status alerts, seasonal road trip recommendations, exclusive offers by tier</li>
+                    <li><strong>Frequency:</strong> Weekly newsletter, real-time transactional messages, monthly Pathfinder Rewards digest</li>
+                </ul>
+                
+                <h3>Paid Media Strategy</h3>
+                
+                <h4>Year 1 Budget Allocation:</h4>
+                <ul>
+                    <li>Search (Google/Bing): 40%</li>
+                    <li>Social (Meta, TikTok): 35%</li>
+                    <li>Display/Programmatic: 15%</li>
+                    <li>Partnerships/Sponsorships: 10%</li>
+                </ul>
+                
+                <h3>Partnership Marketing</h3>
+                
+                <h4>Tourism Partnerships</h4>
+                
+                <h5>National Level:</h5>
+                <ul>
+                    <li>American Road Trip Association</li>
+                    <li>National Scenic Byways Program</li>
+                    <li>Visit USA (international travelers)</li>
+                    <li>AAA EV trip planning integration</li>
+                </ul>
+                
+                <h5>Regional Tourism Boards:</h5>
+                <ul>
+                    <li>Co-branded scenic route EV guides</li>
+                    <li>Featured in regional road trip itineraries</li>
+                    <li>Joint promotional campaigns</li>
+                    <li>Visitor center materials and displays</li>
+                </ul>
+                
+                <h4>Hospitality Partnerships</h4>
+                <ul>
+                    <li>Boutique hotels and resorts along scenic corridors</li>
+                    <li>Regional restaurants with "Charge and dine" promotions</li>
+                    <li>National/State Parks partnerships</li>
+                    <li>Cultural sites and museums</li>
+                </ul>
+                
+                <h4>Brand Partnerships</h4>
+                <ul>
+                    <li><strong>Outdoor & Adventure:</strong> Patagonia, REI, YETI, The North Face</li>
+                    <li><strong>Automotive:</strong> Non-exclusive partnerships with EV manufacturers</li>
+                    <li><strong>Food & Beverage:</strong> Regional coffee roasters, local artisan producers</li>
+                </ul>
+            </section>
+
+            <section id="part8">
+                <h2>Part 8: B2B Marketing Strategy</h2>
+                
+                <h3>Site Host Acquisition</h3>
+                
+                <h4>Target Partners (Priority Order):</h4>
+                <ol>
+                    <li>Premium tourist destinations along scenic corridors</li>
+                    <li>Boutique hotels and resorts in underserved scenic areas</li>
+                    <li>Regional restaurants with parking and highway visibility</li>
+                    <li>State/National Parks and recreation areas</li>
+                    <li>Scenic overlooks and public rest areas</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <h4>Value Proposition:</h4>
+                    <p><strong>Lead:</strong> "Become the destination, not just a stop"</p>
+                    <p><strong>Support:</strong> "Premium travelers, extended dwells, incremental revenue stream"</p>
+                    <p><strong>Proof:</strong> "Average Basecamp session drives $15+ ancillary spending; Waystation $6+"</p>
+                </div>
+                
+                <h4>Sales Enablement Tools:</h4>
+                <ul>
+                    <li>Custom renderings of partner's site with Rangeway integration</li>
+                    <li>Revenue projection models specific to location and traffic</li>
+                    <li>Case studies from operational sites (post-launch)</li>
+                    <li>Sustainability impact reports</li>
+                    <li>Traffic and utilization forecasts by ElectroTempo</li>
+                    <li>Local economic impact analysis</li>
+                </ul>
+                
+                <h3>Fleet & Corporate Programs</h3>
+                
+                <h4>Target Segments:</h4>
+                <ol>
+                    <li><strong>Tourism Operators:</strong> Bus companies, shuttle services, tour operators</li>
+                    <li><strong>Hospitality Workers:</strong> Hotel, restaurant, venue staff in scenic areas</li>
+                    <li><strong>Tech Companies:</strong> Remote workers and teams along scenic corridors</li>
+                    <li><strong>Government Fleets:</strong> Parks, recreation, regional agencies</li>
+                    <li><strong>Rental Car Companies:</strong> Expanding EV fleet offerings</li>
+                </ol>
+                
+                <h4>B2B Offering:</h4>
+                <ul>
+                    <li>Dedicated charging windows during off-peak hours</li>
+                    <li>Volume discounts for frequent use (tiered pricing)</li>
+                    <li>Co-branded charge cards and simplified billing</li>
+                    <li>Monthly consolidated billing</li>
+                    <li>Preferred parking at select high-demand locations</li>
+                    <li>VIP lounge access at Basecamps for fleet drivers</li>
+                    <li>Custom reporting and analytics dashboards</li>
+                </ul>
+            </section>
+
+            <section id="part9">
+                <h2>Part 9: Campaign Frameworks</h2>
+                
+                <h3>Seasonal Campaigns</h3>
+                
+                <h4>Summer Road Trip Season (May-August)</h4>
+                <div class="color-group">
+                    <h5>"America's Electric Summer"</h5>
+                    <ul>
+                        <li>Regional road trip pass bundles (unlimited charging in corridor)</li>
+                        <li>Partnership activations with scenic corridor hotels</li>
+                        <li>Instagram contest: #RangewayRoadTrip with weekly prizes</li>
+                        <li>Influencer partnerships with adventure travel creators</li>
+                        <li>Interactive route planning tools and downloadable guides</li>
+                        <li>"Best of Summer" charging destination guide by region</li>
+                    </ul>
+                </div>
+                
+                <h4>Holiday Travel (November-January)</h4>
+                <div class="color-group">
+                    <h5>"Holiday Journey, Reimagined"</h5>
+                    <ul>
+                        <li>"Thanksgiving Trek" reliability campaign highlighting uptime</li>
+                        <li>Extended hours at Basecamps during peak travel periods</li>
+                        <li>Family-focused amenities promotion (kids' areas, family restrooms)</li>
+                        <li>Winter weather preparedness content and tips</li>
+                        <li>Holiday gift cards and seasonal merchandise</li>
+                        <li>New Year campaign: "Make 2026 Your Electric Adventure Year"</li>
+                    </ul>
+                </div>
+                
+                <h4>Spring Adventure Season (March-May)</h4>
+                <div class="color-group">
+                    <h5>"Spring Routes Awakening"</h5>
+                    <ul>
+                        <li>Wildflower season corridor guides with bloom tracking</li>
+                        <li>National Parks partnership content for peak season</li>
+                        <li>Earth Day sustainability messaging (April 22)</li>
+                        <li>Spring break family road trip planning tools</li>
+                        <li>"First Charge of Spring" promotional offers</li>
+                        <li>Wildlife viewing guides integrated with charging stops</li>
+                    </ul>
+                </div>
+                
+                <h4>Fall Foliage Season (September-November)</h4>
+                <div class="color-group">
+                    <h5>"Autumn Electric"</h5>
+                    <ul>
+                        <li>Real-time fall color route recommendations</li>
+                        <li>Cozy Basecamp café seasonal offerings (pumpkin spice, hot cider)</li>
+                        <li>Harvest season local product features</li>
+                        <li>Back-to-school educator discounts (10% for teachers)</li>
+                        <li>Thanksgiving travel prep and planning content</li>
+                        <li>Photography contest for best fall foliage shot at Rangeway</li>
+                    </ul>
+                </div>
+                
+                <h3>Always-On Campaigns</h3>
+                
+                <h4>Reliability Promise: "Works First Time, Guaranteed"</h4>
+                <ul>
+                    <li>Public real-time uptime dashboard on website</li>
+                    <li>Monthly transparency reports</li>
+                    <li>Proactive maintenance communications via app</li>
+                    <li>Success story highlights and session completion rates</li>
+                    <li>Technical excellence messaging</li>
+                    <li>Partnership spotlights (ChargerHelp!, Clockwork Energy)</li>
+                </ul>
+                
+                <h4>Local Love: "Charged by America"</h4>
+                <ul>
+                    <li>Monthly spotlights on regional supplier partners</li>
+                    <li>Local product features at Basecamps (rotating)</li>
+                    <li>Community event hosting and sponsorships</li>
+                    <li>Regional supplier origin stories</li>
+                    <li>Economic impact reporting by community</li>
+                    <li>"Meet the Maker" series featuring local artisans</li>
+                </ul>
+                
+                <h4>Comfort Guarantee: "Indoor Comfort, Every Time"</h4>
+                <ul>
+                    <li>Weather comparison content ("45°F and raining at EA vs. 72°F inside Rangeway")</li>
+                    <li>Lounge amenity highlights and virtual tours</li>
+                    <li>Premium restroom standards showcase</li>
+                    <li>Climate control emphasis in all seasons</li>
+                    <li>Family-friendly features (changing tables, kids' areas)</li>
+                    <li>Accessibility features and ADA compliance</li>
+                </ul>
+            </section>
+
+            <section id="part10">
+                <h2>Part 10: Content Guidelines</h2>
+                
+                <h3>Photography Standards</h3>
+                
+                <h4>Composition & Style:</h4>
+                <ul>
+                    <li>Golden hour preferred (sunrise/sunset for brand color alignment)</li>
+                    <li>Rule of thirds and leading lines emphasizing the journey</li>
+                    <li>Authentic moments with real drivers, not models</li>
+                    <li>Include vehicle in landscape showing regional character</li>
+                    <li>Detail shots: Coffee, amenities, interactions, charger UX</li>
+                    <li>Authenticity over perfection: Capture genuine experiences</li>
+                    <li>Seasonal variation: Document locations across all four seasons</li>
+                </ul>
+                
+                <h4>Subject Diversity:</h4>
+                <ul>
+                    <li>Variety of EV makes and models (not just premium brands)</li>
+                    <li>Diverse representation of drivers (age, ethnicity, family composition)</li>
+                    <li>Solo travelers, couples, families, friend groups</li>
+                    <li>Different travel styles (adventure, luxury, budget, accessibility)</li>
+                    <li>Include accessibility features and accessible amenities</li>
+                </ul>
+                
+                <h3>Video Guidelines</h3>
+                
+                <h4>User Testimonials (30-60 seconds)</h4>
+                <ul>
+                    <li>Focus on emotional experience and surprise/delight</li>
+                    <li>Capture spontaneous reactions, not scripted responses</li>
+                    <li>Ask: "How was this different from other charging stops?"</li>
+                    <li>Include B-roll of them using amenities</li>
+                    <li>Natural lighting, minimal production</li>
+                </ul>
+                
+                <h4>Site Tours (2-3 minutes)</h4>
+                <ul>
+                    <li>Walkthrough of amenities with narrative</li>
+                    <li>Charging process demonstration from arrival to departure</li>
+                    <li>Highlight local area and scenic surroundings</li>
+                    <li>Interview with Trailkeepers (Basecamps)</li>
+                    <li>Show both peak and off-peak experiences</li>
+                </ul>
+                
+                <h3>Copy Guidelines</h3>
+                
+                <h4>Voice & Tone:</h4>
+                <ul>
+                    <li>Warm and welcoming, not corporate</li>
+                    <li>Confident but not arrogant</li>
+                    <li>Knowledgeable but not condescending</li>
+                    <li>Conversational but professional</li>
+                    <li>Optimistic about electric travel</li>
+                </ul>
+                
+                <div class="note-box">
+                    <h4>Brand Vocabulary</h4>
+                    
+                    <h5>Use These Terms:</h5>
+                    <ul>
+                        <li>Basecamps (full-service locations)</li>
+                        <li>Waystations (automated locations)</li>
+                        <li>Trailkeepers (staff at Basecamps)</li>
+                        <li>Pathfinders (loyalty members)</li>
+                        <li>Scenic corridors/highways</li>
+                        <li>Journey, adventure, destination</li>
+                        <li>Regional support/model</li>
+                    </ul>
+                    
+                    <h5>Avoid These Terms:</h5>
+                    <ul>
+                        <li>Hubs/satellites (outdated terminology)</li>
+                        <li>Stations (too generic)</li>
+                        <li>Attendants (too transactional)</li>
+                        <li>Customers (prefer "drivers" or "Pathfinders")</li>
+                        <li>Fast food (use "quality food & beverage")</li>
+                        <li>Pods/stalls (use "chargers" or "charging ports")</li>
+                    </ul>
+                </div>
+                
+                <h3>Social Media Examples</h3>
+                
+                <h4>Instagram Caption Example:</h4>
+                <pre><code>That moment when your charging stop has better views 
+than your destination ⛰️
+
+📍 Big Sur Basecamp
+⚡ 25 minutes to 80%
+☕ Local organic roast brewing now
+🏠 2,500 sq ft of climate-controlled comfort
+
+Where's your next electric adventure taking you?
+
+#RangewayMoment #BigSur #PCH #EVRoadTrip #ElectricTravel</code></pre>
+                
+                <h4>Email Subject Line Examples:</h4>
+                
+                <p><strong>Engagement:</strong></p>
+                <ul>
+                    <li>"Your [Route Name] charging guide is ready 🗺️"</li>
+                    <li>"New: [Location] Waystation now open ⚡"</li>
+                    <li>"You've earned a free coffee ☕"</li>
+                </ul>
+                
+                <p><strong>Seasonal:</strong></p>
+                <ul>
+                    <li>"Plan your summer electric adventure 🌄"</li>
+                    <li>"Fall foliage routes with reliable charging 🍂"</li>
+                    <li>"Holiday travel without range anxiety 🎄"</li>
+                </ul>
+            </section>
+
+            <section id="part11">
+                <h2>Part 11: Metrics & Analytics</h2>
+                
+                <h3>Marketing Performance Metrics</h3>
+                
+                <h4>Awareness Stage</h4>
+                <ul>
+                    <li>Brand search volume growth (by region)</li>
+                    <li>Social media follower growth rate and engagement</li>
+                    <li>Share of voice vs. competitors (mentions, coverage)</li>
+                    <li>Unprompted brand awareness (quarterly surveys in key markets)</li>
+                    <li>Website traffic by geographic source</li>
+                    <li>Tourism board referral traffic</li>
+                    <li>Press mentions and media impressions</li>
+                </ul>
+                
+                <h4>Consideration Stage</h4>
+                <ul>
+                    <li>Website → App downloads conversion rate</li>
+                    <li>Email list growth by region</li>
+                    <li>Partnership inquiry volume and quality</li>
+                    <li>Media coverage quality score (tier 1/2/3 breakdown)</li>
+                    <li>Press mention sentiment analysis</li>
+                    <li>Route planning tool usage and engagement</li>
+                </ul>
+                
+                <h4>Utilization Stage</h4>
+                <ul>
+                    <li>Sessions per unique driver (frequency)</li>
+                    <li>Average session duration by location tier</li>
+                    <li>Ancillary revenue per session (café, retail, ads)</li>
+                    <li>Repeat usage rate (monthly cohort analysis)</li>
+                    <li>New vs. returning driver ratio</li>
+                    <li>Cross-regional usage patterns</li>
+                </ul>
+                
+                <h4>Advocacy Stage</h4>
+                <ul>
+                    <li>Net Promoter Score (target: 70+ by end of Year 1)</li>
+                    <li>User-generated content volume and engagement</li>
+                    <li>Referral program participation and conversion</li>
+                    <li>Google/PlugShare ratings (target: 4.8+ average)</li>
+                    <li>Social media engagement rate</li>
+                    <li>Driver testimonial submissions</li>
+                </ul>
+                
+                <h3>Business Impact Metrics</h3>
+                <ul>
+                    <li><strong>Marketing-attributed sessions:</strong> Sessions from users with touchpoints in marketing channels</li>
+                    <li><strong>Customer Acquisition Cost (CAC)</strong> by channel: Total channel spend ÷ new users acquired</li>
+                    <li><strong>Lifetime Value (LTV)</strong> by segment: Average revenue per user over lifetime</li>
+                    <li><strong>Marketing ROI</strong> by channel: (Revenue - Cost) ÷ Cost</li>
+                    <li><strong>Partnership revenue contribution:</strong> Ancillary revenue from partnership activations</li>
+                    <li><strong>Pathfinder Rewards conversion:</strong> % of users joining paid tiers</li>
+                </ul>
+                
+                <h3>ROI Expectations by Phase</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Focus</th>
+                            <th>Target ROI</th>
+                            <th>Key Metrics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Months 1-6</td>
+                            <td>Brand building</td>
+                            <td>Long-term equity</td>
+                            <td>10K email subscribers, 20K social followers</td>
+                        </tr>
+                        <tr>
+                            <td>Months 7-12</td>
+                            <td>Utilization & loyalty</td>
+                            <td>2:1 ROI</td>
+                            <td>10K+ sessions, 30% repeat rate</td>
+                        </tr>
+                        <tr>
+                            <td>Year 2</td>
+                            <td>Efficiency & scaling</td>
+                            <td>4:1 ROI</td>
+                            <td>40% repeat customers</td>
+                        </tr>
+                        <tr>
+                            <td>Year 3+</td>
+                            <td>Network effects</td>
+                            <td>6:1 ROI</td>
+                            <td>50%+ repeat, strong organic growth</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="part12">
+                <h2>Part 12: Crisis Communication</h2>
+                
+                <h3>Outage Response Protocol</h3>
+                
+                <h4>Minute 0-5: Detection & Initial Response</h4>
+                <ul>
+                    <li>Automatic customer notifications via app/SMS</li>
+                    <li>Social media status update posted</li>
+                    <li>Alternative charger recommendations provided automatically</li>
+                    <li>Internal team alert and mobilization</li>
+                    <li>Begin diagnostics and response dispatch</li>
+                </ul>
+                
+                <h4>Minute 5-30: Ongoing Communication</h4>
+                
+                <div class="note-box">
+                    <h5>Standard Message Template:</h5>
+                    <pre><code>[Location] Basecamp/Waystation is temporarily offline. 
+
+Estimated restoration: [time]
+
+Nearest alternatives:
+• [Alternative 1]: [X] miles → [directions link]
+• [Alternative 2]: [Y] miles → [directions link]
+
+Your next charge on us: Affected customers receive 
+2 free sessions automatically. No action needed.
+
+We're on it. Updates every 15 minutes.</code></pre>
+                </div>
+                
+                <h4>Post-Resolution: Recovery & Transparency</h4>
+                <ul>
+                    <li>Thank you message to affected customers within 1 hour</li>
+                    <li>Root cause analysis shared within 24 hours (when appropriate)</li>
+                    <li>Compensation automatically applied (2 free sessions)</li>
+                    <li>Process improvement communication</li>
+                    <li>Service quality recommitment</li>
+                </ul>
+                
+                <h3>Site Delay Protocol</h3>
+                
+                <h4>For Construction/Permitting Delays</h4>
+                
+                <h5>30+ Days Before Original Opening:</h5>
+                <ul>
+                    <li>Proactive communication to waitlist and local community</li>
+                    <li>Explain reason (permitting, weather, supply chain, equipment)</li>
+                    <li>Provide revised opening date with confidence level</li>
+                    <li>Offer "First to Know" notification signup</li>
+                    <li>Share construction progress photos weekly</li>
+                </ul>
+                
+                <h5>Community Engagement During Delay:</h5>
+                <ul>
+                    <li>Host preview event when site does open ("worth the wait")</li>
+                    <li>Extra celebration at grand opening</li>
+                    <li>"Worth the Wait" promotional offer (e.g., 20% off first month)</li>
+                    <li>Behind-the-scenes content about challenges overcome</li>
+                </ul>
+                
+                <h3>Negative Review Management</h3>
+                
+                <div class="warning-box">
+                    <h4>Response Protocol:</h4>
+                    <ol>
+                        <li><strong>Acknowledge within 24 hours</strong> on all public platforms</li>
+                        <li><strong>Apologize sincerely</strong> for the experience</li>
+                        <li><strong>Offer immediate resolution</strong> (refund, free sessions, direct contact)</li>
+                        <li><strong>Take conversation offline</strong> when appropriate</li>
+                        <li><strong>Follow up publicly</strong> once resolved (with permission)</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="part13">
+                <h2>Part 13: Budget & Resource Allocation</h2>
+                
+                <h3>Marketing Budget Distribution</h3>
+                
+                <h4>Pre-Launch (6 months before first site) - $500K Example</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>%</th>
+                            <th>Amount</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Brand Development</td>
+                            <td>30%</td>
+                            <td>$150K</td>
+                            <td>Logo, guidelines, assets, photo/video library, website</td>
+                        </tr>
+                        <tr>
+                            <td>Digital Presence</td>
+                            <td>25%</td>
+                            <td>$125K</td>
+                            <td>Social content, SEO, paid social seeding</td>
+                        </tr>
+                        <tr>
+                            <td>Partnerships</td>
+                            <td>20%</td>
+                            <td>$100K</td>
+                            <td>Tourism boards, brand partnerships, influencer seeding</td>
+                        </tr>
+                        <tr>
+                            <td>Content Creation</td>
+                            <td>15%</td>
+                            <td>$75K</td>
+                            <td>Route guides, educational content, pre-launch stories</td>
+                        </tr>
+                        <tr>
+                            <td>Events & Community</td>
+                            <td>10%</td>
+                            <td>$50K</td>
+                            <td>Preview events, community meetups, stakeholder events</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>Year 1 Operations - $2M Example</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>%</th>
+                            <th>Amount</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Digital Marketing</td>
+                            <td>35%</td>
+                            <td>$700K</td>
+                            <td>Paid search/social, content production, influencers, app marketing</td>
+                        </tr>
+                        <tr>
+                            <td>Partnership Programs</td>
+                            <td>20%</td>
+                            <td>$400K</td>
+                            <td>Tourism activations, hospitality partnerships, brand collaborations</td>
+                        </tr>
+                        <tr>
+                            <td>Content & Creative</td>
+                            <td>15%</td>
+                            <td>$300K</td>
+                            <td>Ongoing photo/video, UGC campaigns, seasonal creative</td>
+                        </tr>
+                        <tr>
+                            <td>Events & Experiences</td>
+                            <td>15%</td>
+                            <td>$300K</td>
+                            <td>Grand openings, community events, road rallies</td>
+                        </tr>
+                        <tr>
+                            <td>Technology & Tools</td>
+                            <td>10%</td>
+                            <td>$200K</td>
+                            <td>Marketing stack, analytics, CRM, loyalty platform</td>
+                        </tr>
+                        <tr>
+                            <td>Research & Analytics</td>
+                            <td>5%</td>
+                            <td>$100K</td>
+                            <td>Market research, surveys, competitive intelligence, brand tracking</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Team Structure & Costs</h3>
+                
+                <h4>Phase 1: Pre-Launch → Year 1</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Type</th>
+                            <th>Total Comp</th>
+                            <th>Responsibilities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fractional CMO</td>
+                            <td>Part-time advisory</td>
+                            <td>$120K/year</td>
+                            <td>Strategic oversight, board reporting, major partnerships<br>Current: Theo Reichelt</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing Manager</td>
+                            <td>Full-time</td>
+                            <td>$135K</td>
+                            <td>Day-to-day execution, campaign management, partner coordination</td>
+                        </tr>
+                        <tr>
+                            <td>Community Manager</td>
+                            <td>Full-time</td>
+                            <td>$95K</td>
+                            <td>Social media, customer engagement, events, UGC curation</td>
+                        </tr>
+                        <tr>
+                            <td>Agency Partners</td>
+                            <td>Variable</td>
+                            <td>Variable</td>
+                            <td>Creative, performance, PR, local field teams</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>Phase 2: Year 2+ (Network Expansion)</h4>
+                
+                <p><strong>Add:</strong></p>
+                <ul>
+                    <li>VP Marketing (replaces Fractional CMO): $270K total comp</li>
+                    <li>B2B Marketing Manager: $155K total comp</li>
+                    <li>Content Creator/Videographer: $85K total comp</li>
+                    <li>Marketing Analyst: $115K total comp</li>
+                    <li>Regional Marketing Coordinators: $95K each (as regions scale)</li>
+                </ul>
+            </section>
+
+            <section id="part14">
+                <h2>Part 14: Technology Stack</h2>
+                
+                <h3>Essential Marketing Tools</h3>
+                
+                <h4>Foundation (Launch)</h4>
+                <ul>
+                    <li><strong>CRM:</strong> HubSpot or Salesforce (customer data platform)</li>
+                    <li><strong>Email/SMS:</strong> Klaviyo or Braze (segmentation and automation)</li>
+                    <li><strong>Social Management:</strong> Sprout Social or Hootsuite (scheduling and monitoring)</li>
+                    <li><strong>Analytics:</strong> Google Analytics 4 + Mixpanel (behavior tracking)</li>
+                    <li><strong>Design:</strong> Canva Pro or Adobe Creative Suite (asset creation)</li>
+                    <li><strong>Project Management:</strong> Asana or Monday.com (workflow coordination)</li>
+                    <li><strong>DAM:</strong> Brandfolder or Bynder (digital asset management)</li>
+                </ul>
+                
+                <h4>Growth (Year 1+)</h4>
+                
+                <p><strong>Add:</strong></p>
+                <ul>
+                    <li><strong>Loyalty Platform:</strong> Talon.One or Antavo (Pathfinder Rewards management)</li>
+                    <li><strong>Survey/Feedback:</strong> Typeform + Hotjar (customer insights)</li>
+                    <li><strong>Attribution:</strong> Triple Whale or Northbeam (multi-touch attribution)</li>
+                    <li><strong>Review Management:</strong> BirdEye or Reputation.com (review monitoring and response)</li>
+                    <li><strong>AI Assistant:</strong> Claude or ChatGPT Enterprise (content and analysis)</li>
+                    <li><strong>Influencer Platform:</strong> AspireIQ or Grin (creator relationship management)</li>
+                    <li><strong>SEO Tools:</strong> Ahrefs or SEMrush (keyword and competitor research)</li>
+                </ul>
+                
+                <h3>CPMS Integration Requirements</h3>
+                
+                <div class="note-box">
+                    <p>The marketing technology stack must integrate with the Charge Point Management System (CPMS) for:</p>
+                    <ul>
+                        <li><strong>Dynamic Pricing Campaigns:</strong> Time-of-day and promotional pricing</li>
+                        <li><strong>Voucher/Promo Codes:</strong> Generation and redemption tracking</li>
+                        <li><strong>Member Tier Recognition:</strong> Pathfinder status-based benefits</li>
+                        <li><strong>Session Data:</strong> Real-time charging data for personalization</li>
+                        <li><strong>Automated Triggers:</strong> Session completion, milestone achievements</li>
+                        <li><strong>API Connections:</strong> Real-time bidirectional data flow</li>
+                        <li><strong>Personalization:</strong> On-screen messaging based on user profile</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="part15">
+                <h2>Part 15: Implementation Roadmap</h2>
+                
+                <h3>Pre-Launch Timeline (6 Months Before First Site)</h3>
+                
+                <h4>Months 1-2: Foundation</h4>
+                <ul>
+                    <li>Finalize all brand assets and guidelines</li>
+                    <li>Launch website and social channels</li>
+                    <li>Begin content library creation (3 regions)</li>
+                    <li>Establish tourism partnership discussions</li>
+                    <li>Hire Marketing Manager and Community Manager</li>
+                    <li>Set up core marketing technology stack</li>
+                    <li>Develop Pathfinder Rewards program structure</li>
+                </ul>
+                
+                <h4>Months 3-4: Community Building</h4>
+                <ul>
+                    <li>Launch "Rangeway Pioneers" early access program (goal: 500 members)</li>
+                    <li>Host 3 preview events in target regions</li>
+                    <li>Complete media tour planning and pitch development</li>
+                    <li>Conduct influencer outreach and content seeding (10 creators)</li>
+                    <li>Activate first tourism board partnerships (2 regions)</li>
+                    <li>Ramp up content production (daily social, weekly blog)</li>
+                    <li>Begin paid social seeding campaigns</li>
+                </ul>
+                
+                <h4>Months 5-6: Activation</h4>
+                <ul>
+                    <li>Finalize grand opening planning and logistics</li>
+                    <li>Complete app development and beta testing</li>
+                    <li>Set up Pathfinder Rewards loyalty platform</li>
+                    <li>Train Trailkeepers for Basecamps (customer experience focus)</li>
+                    <li>Execute soft launch communications</li>
+                    <li>Complete press kit and distribute to media</li>
+                    <li>Ramp paid advertising in launch markets</li>
+                </ul>
+                
+                <h3>Post-Launch Timeline (Months 7-18)</h3>
+                
+                <h4>Quarter 1: Learn (Months 7-9)</h4>
+                <ul>
+                    <li>Execute grand opening protocol for first locations</li>
+                    <li>Gather systematic user feedback (surveys, interviews)</li>
+                    <li>Optimize operations based on real usage patterns</li>
+                    <li>Refine messaging based on customer language</li>
+                    <li>Test campaign approaches across channels</li>
+                    <li>Build 10 case studies from early adopters</li>
+                    <li>Iterate on pricing and promotional strategies</li>
+                </ul>
+                
+                <h4>Quarter 2: Scale (Months 10-12)</h4>
+                <ul>
+                    <li>Expand regional partnerships (add 3 new tourism boards)</li>
+                    <li>Officially launch Pathfinder Rewards with full benefits</li>
+                    <li>Increase paid advertising budget based on proven channels</li>
+                    <li>Announce pipeline of 3-5 new locations</li>
+                    <li>Activate first major UGC campaign</li>
+                    <li>Pilot B2B fleet programs (2-3 partners)</li>
+                    <li>Achieve Year 1 goals (10K sessions, 70+ NPS)</li>
+                </ul>
+                
+                <h3>Success Milestones</h3>
+                
+                <div class="highlight-box">
+                    <h4>By End of Year 1</h4>
+                    <ul>
+                        <li>1 Basecamp + 2 Waystations operational</li>
+                        <li>10,000+ charging sessions completed</li>
+                        <li>70+ Net Promoter Score achieved</li>
+                        <li>$1.5M annual revenue run rate</li>
+                        <li>98%+ network uptime delivered</li>
+                        <li>&lt;2 hour average response time demonstrated</li>
+                        <li>10,000+ app downloads</li>
+                        <li>500+ paid Pathfinder Rewards members</li>
+                    </ul>
+                </div>
+                
+                <div class="note-box">
+                    <h4>By End of Year 2</h4>
+                    <ul>
+                        <li>2 Basecamps + 4-6 Waystations total</li>
+                        <li>40,000+ charging sessions</li>
+                        <li>98.5% network uptime</li>
+                        <li>$4M annual revenue run rate</li>
+                        <li>Digital advertising revenue stream established</li>
+                        <li>30,000+ app downloads</li>
+                        <li>2,000+ paid Pathfinder members</li>
+                        <li>Profitable at site level</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="part16">
+                <h2>Part 16: Competitive Intelligence</h2>
+                
+                <h3>Competitive Positioning Map</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Network</th>
+                            <th>Strength</th>
+                            <th>Weakness</th>
+                            <th>Our Advantage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tesla Supercharger</strong></td>
+                            <td>Technology & scale</td>
+                            <td>Limited access, minimal amenities</td>
+                            <td>Open to all EVs, premium experiences</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Electrify America</strong></td>
+                            <td>Coverage & speed</td>
+                            <td>Parking lot locations, reliability issues</td>
+                            <td>Indoor comfort, 99% uptime guarantee</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EVgo</strong></td>
+                            <td>Urban convenience</td>
+                            <td>Not focused on scenic routes</td>
+                            <td>Purpose-built for scenic corridors</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ChargePoint</strong></td>
+                            <td>Network size</td>
+                            <td>Mostly L2, limited DCFC</td>
+                            <td>High-power DCFC at every location</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gas Station Add-ons</strong></td>
+                            <td>Accessibility</td>
+                            <td>Transactional, not designed for dwells</td>
+                            <td>Experience-first, 30-40 min dwell optimization</td>
+                        </tr>
+                        <tr style="background: #FFF5EB;">
+                            <td><strong>Rangeway</strong></td>
+                            <td><strong>Journey & Experience</strong></td>
+                            <td>Limited initial coverage</td>
+                            <td><strong>Category creator: Premium scenic charging</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight-box">
+                    <h3>Market Positioning Statement</h3>
+                    <p>"Rangeway Energy owns the 'premium scenic corridor charging' category. While competitors compete on urban convenience or highway ubiquity, we dominate the underserved but high-value market of experiential EV travel. Our differentiation—guaranteed indoor comfort, hospitality-grade experiences, and regional operational excellence—creates a defensible position that's difficult to replicate without fundamental business model changes."</p>
+                </div>
+            </section>
+
+            <section id="appendices">
+                <h2>Appendices</h2>
+                
+                <h3>A. Regional Messaging Frameworks</h3>
+                <p>Available in separate regional marketing guides:</p>
+                <ul>
+                    <li>Pacific Coast Highway Guide</li>
+                    <li>Blue Ridge Parkway Guide</li>
+                    <li>Route 66 Guide</li>
+                    <li>Rocky Mountain Scenic Byways Guide</li>
+                    <li>Southwest Desert Routes Guide</li>
+                    <li>Great Lakes Circle Tour Guide</li>
+                </ul>
+                
+                <h3>B. Partnership Agreement Templates</h3>
+                <p>Available in separate partnership toolkit:</p>
+                <ul>
+                    <li>Tourism Board Partnership Template</li>
+                    <li>Hospitality Partner Agreement Framework</li>
+                    <li>Brand Partnership Structure</li>
+                    <li>Site Host Agreement Template</li>
+                    <li>Fleet Program Agreement</li>
+                </ul>
+                
+                <h3>C. Brand Asset Library</h3>
+                <p><strong>Access:</strong> Shared drive (team access required)</p>
+                
+                <p><strong>Contents:</strong></p>
+                <ul>
+                    <li>Logo files (all formats: AI, SVG, PNG, JPG)</li>
+                    <li>Color palettes (digital swatch files & print CMYK)</li>
+                    <li>Typography files (WOFF, TTF, OTF)</li>
+                    <li>Photography library (organized by region and subject)</li>
+                    <li>Video assets (master files + social-optimized versions)</li>
+                    <li>Social media templates (Instagram, TikTok, LinkedIn)</li>
+                    <li>Presentation templates (Keynote, PowerPoint, Google Slides)</li>
+                    <li>Signage templates (wayfinding, on-site, highway)</li>
+                    <li>Merchandise mockups and vendor specs</li>
+                </ul>
+                
+                <h3>D. Campaign Calendar Template</h3>
+                <p>Available in project management system with:</p>
+                <ul>
+                    <li>Monthly themes and seasonal campaigns</li>
+                    <li>Content production schedules</li>
+                    <li>Partnership activation timelines</li>
+                    <li>Paid media flight dates</li>
+                    <li>Event calendar</li>
+                    <li>Product launch integration</li>
+                </ul>
+                
+                <h3>E. Measurement Framework</h3>
+                <p>Detailed measurement plans including:</p>
+                <ul>
+                    <li>Attribution model specifications</li>
+                    <li>Survey question banks</li>
+                    <li>Customer journey tracking methodology</li>
+                    <li>Cohort analysis frameworks</li>
+                    <li>A/B testing protocols</li>
+                </ul>
+            </section>
+
+            <div class="highlight-box" style="margin-top: 80px;">
+                <h2 style="border: none; padding: 0;">Remember Our Core Principle</h2>
+                <h3 style="color: #F09060; margin-top: 20px;">"We're not selling kilowatts. We're enabling adventures."</h3>
+                <p>Every marketing decision should ask: "Does this help someone choose the scenic route?"</p>
+            </div>
+
+            <div class="footer">
+                <p><strong>For Questions or Updates</strong><br>
+                Email: brand@rangeway.energy</p>
+                
+                <p style="margin-top: 30px;"><strong>Version History</strong></p>
+                <ul style="list-style: none; margin: 10px 0;">
+                    <li>v1.0 - August 2025 - Initial Brand Playbook</li>
+                    <li>v2.0 - September 2025 - Full Marketing Strategy Integration</li>
+                    <li>v2.1 - October 2025 - Updated terminology (Waystations), broadened geographic scope</li>
+                    <li><strong>v3.0 - October 2025 - Comprehensive strategic refresh, expanded implementation guidance</strong></li>
+                </ul>
+                
+                <p style="margin-top: 30px;"><strong>Next Review:</strong> January 2026 (post-launch adjustments)</p>
+                
+                <p style="margin-top: 20px;"><strong>Document Classification:</strong> Internal Use Only - Confidential</p>
+                
+                <p style="margin-top: 20px;"><strong>Prepared by:</strong> Rangeway Energy Marketing Team with Theo Reichelt (Fractional CMO)</p>
+                
+                <p style="margin-top: 40px; font-style: italic; color: #2C5F7C;">
+                    This playbook is a living document. As we learn from the market, launch our first sites, and gather customer insights, we'll refine our approach. The brand foundation remains constant; the tactics evolve.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
