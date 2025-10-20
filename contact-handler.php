@@ -309,7 +309,7 @@ $confirmation_html .= '
 $headers = array();
 $headers[] = "MIME-Version: 1.0";
 $headers[] = "Content-type: text/html; charset=UTF-8";
-$headers[] = "From: " . SITE_NAME . " Contact Form <noreply@" . SITE_DOMAIN . ">";
+$headers[] = "From: " . SITE_NAME . " Contact Form <hello@" . SITE_DOMAIN . ">";
 $headers[] = "Reply-To: $name <$email>";
 $headers[] = "X-Mailer: PHP/" . phpversion();
 
