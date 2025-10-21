@@ -139,17 +139,17 @@
 
    <section class="alt-bg">
     <div class="container">
-        <div class="section-header">
-            <h2>Two Ways to Charge</h2>
-            <p>Basecamps and Waystations work together to keep you moving on scenic routes</p>
-        </div>
+        <div class="section-header" style="margin-bottom: 0;">
+    <h2>Two Ways to Charge</h2>
+    <p style="margin-bottom: 0;">Basecamps and Waystations work together to keep you moving on scenic routes</p>
+</div>
 
-        <div style="max-width: 900px; margin: 0 auto 4rem auto; text-align: center;">
-            <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8;">
-               The Baker Basecamp will anchor our regional network, providing full-service hospitality.
-                Surrounding Waystations offer the same indoor comfort in a streamlined, automated format—perfect for quick charging stops.
-            </p>
-        </div>
+<div style="max-width: 900px; margin: 1rem auto 4rem auto; text-align: center;">
+    <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8;">
+       The Baker Basecamp will anchor our regional network, providing full-service hospitality.
+        Surrounding Waystations offer the same indoor comfort in a streamlined, automated format—perfect for quick charging stops.
+    </p>
+</div>
 
             <div class="network-cards-grid">
                 <div class="network-location-card">
