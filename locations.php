@@ -138,11 +138,10 @@
     </section>
 
     <section class="alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <h2>Two Ways to Charge</h2>
-                <p>Basecamps and Waystations work together to keep you moving on scenic routes</p>
-            </div>
+<div class="section-header">
+    <h2 style="margin-bottom: 0;">Two Ways to Charge</h2>
+    <p style="margin-top: 0;">Basecamps and Waystations work together to keep you moving on scenic routes</p>
+</div>
 
             <div style="max-width: 900px; margin: 0 auto 4rem auto; text-align: center;">
                 <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8;">
