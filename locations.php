@@ -51,42 +51,38 @@
         </div>
     </section>
 
-<section class="alt-bg">
-    <div class="container">
-        <div class="section-header">
-            <h2>Explore the Region</h2>
-            <p>Baker Basecamp is your gateway to unforgettable desert adventures</p>
-        </div>
-        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8;">
-                From Baker, explore Death Valley's otherworldly landscapes, witness sunrise at Zabriskie Point, or cruise the historic LA-Vegas corridor. Our location puts you at the heart of the Mojave Desert's most spectacular scenery.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="alt-bg" style="padding-top: 0;">
-    <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-            <div>
-                <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">30 min</h4>
-                <p style="color: var(--fog-gray);">to Death Valley entrance</p>
+    <section class="alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore the Region</h2>
+                <p>Baker Basecamp is your gateway to unforgettable desert adventures</p>
             </div>
-            <div>
-                <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">90 miles</h4>
-                <p style="color: var(--fog-gray);">to Las Vegas</p>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8; margin-bottom: 1.5rem;">
+                    From Baker, explore Death Valley's otherworldly landscapes, witness sunrise at Zabriskie Point, or cruise the historic LA-Vegas corridor. Our location puts you at the heart of the Mojave Desert's most spectacular scenery.
+                </p>
             </div>
-            <div>
-                <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">180 miles</h4>
-                <p style="color: var(--fog-gray);">to Los Angeles</p>
-            </div>
-            <div>
-                <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">1.1M</h4>
-                <p style="color: var(--fog-gray);">annual park visitors</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div>
+                    <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">30 min</h4>
+                    <p style="color: var(--fog-gray);">to Death Valley entrance</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">90 miles</h4>
+                    <p style="color: var(--fog-gray);">to Las Vegas</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">180 miles</h4>
+                    <p style="color: var(--fog-gray);">to Los Angeles</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">1.1M</h4>
+                    <p style="color: var(--fog-gray);">annual park visitors</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section>
         <div class="container">
