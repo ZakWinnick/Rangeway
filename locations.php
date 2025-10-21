@@ -51,7 +51,7 @@
         </div>
     </section>
 
-   <section class="alt-bg" style="padding-bottom: 3rem;">
+<section class="alt-bg" style="padding-bottom: 3rem;">
     <div class="container">
         <div class="section-header">
             <h2>Explore the Region</h2>
