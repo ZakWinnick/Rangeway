@@ -70,9 +70,7 @@
             <div class="location-content">
                 <div class="location-text">
                     <h2>Baker Basecamp (Opening Soon)</h2>
-                    <p>Our flagship regional hub anchors the gateway to Death Valley and the LA-Vegas corridor. This full-service Basecamp features ultra-fast charging, a premium café, and climate-controlled lounges designed for travelers exploring one of America's most iconic landscapes.</p>
-                    <p>Located at the gateway to Death Valley National Park, which welcomes over 1.1 million visitors annually, the Baker Basecamp also houses our regional Network Operations Center, providing 24/7 monitoring and maintenance support.</p>
-
+                    <p>Where the LA-Vegas corridor meets America's most dramatic desert landscape, our flagship Basecamp welcomes over 1.1 million Death Valley travelers each year. Recharge your vehicle with ultra-fast charging while you relax in climate-controlled comfort with premium café service—exactly what you need before (or after) exploring one of the nation's most iconic national parks.</p>
                     <div class="location-stats">
                         <div class="stat-box">
                             <span class="stat-number">6-8</span>
