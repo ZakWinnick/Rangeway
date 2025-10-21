@@ -52,16 +52,18 @@
     </section>
 
     <section class="alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <h2>Explore the Region</h2>
-                <p>Baker Basecamp is your gateway to unforgettable desert adventures</p>
-            </div>
-            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8; margin-center: 2rem;">
-                    From Baker, explore Death Valley's otherworldly landscapes, witness sunrise at Zabriskie Point, or cruise the historic LA-Vegas corridor. Our location puts you at the heart of the Mojave Desert's most spectacular scenery.
-                </p>
-
+    <div class="container">
+        <div class="section-header">
+            <h2>Explore the Region</h2>
+            <p>Baker Basecamp is your gateway to unforgettable desert adventures</p>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8; margin-bottom: 2rem;">
+                From Baker, explore Death Valley's otherworldly landscapes, witness sunrise at Zabriskie Point, or cruise the historic LA-Vegas corridor. Our location puts you at the heart of the Mojave Desert's most spectacular scenery.
+            </p>
+        </div>
+    </div>
+</section>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
                     <div>
                         <h4 style="color: var(--golden-highway); font-size: 1.5rem; margin-bottom: 0.5rem;">30 min</h4>
