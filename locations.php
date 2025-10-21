@@ -140,7 +140,7 @@
     <section class="alt-bg">
         <div class="container">
             <div class="section-header">
-                <h2>Two Ways to Charge</h2>
+                <h2 style="margin-bottom: 0.5rem;">Two Ways to Charge</h2>
                 <p>Basecamps and Waystations work together to keep you moving on scenic routes</p>
             </div>
 
