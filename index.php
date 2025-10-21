@@ -70,9 +70,9 @@
             <div class="location-content">
                 <div class="location-text">
                     <h2>Baker Basecamp (Opening Soon)</h2>
-                    <p>Positioned on the LA-Vegas corridor at the gateway to Death Valley National Park—which draws 1.1 million visitors annually—our flagship Basecamp serves travelers exploring one of America's most dramatic desert landscapes.</p>>
+                    <p>Positioned on the LA-Vegas corridor at the gateway to Death Valley National Park—which draws 1.1 million visitors annually—our flagship Basecamp serves travelers exploring one of America's most dramatic desert landscapes.</p>
                     <p>Recharge your vehicle with ultra-fast charging while you relax in climate-controlled comfort with premium café service, exactly what you need before (or after) your desert adventure.</p>
-                    
+
                     <div class="location-stats">
                         <div class="stat-box">
                             <span class="stat-number">6-8</span>
