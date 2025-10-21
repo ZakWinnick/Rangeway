@@ -19,7 +19,7 @@
                 <div class="location-info">
                     <span class="status">🔨 Under Development</span>
                     <h2>Baker, California</h2>
-                    <p>Baker Basecamp anchors one of America's most iconic scenic corridors. Located at the gateway to Death Valley National Park, this flagship destination serves travelers exploring the Mojave Desert and beyond.</p>
+                    <p>The Baker Basecamp anchors one of America's most iconic scenic corridors. Located at the gateway to Death Valley National Park, this flagship destination serves travelers exploring the Mojave Desert and beyond.</p>
                     <p>Ultra-fast charging, a premium café featuring local partners, and climate-controlled indoor lounges designed for desert journeys. Everything you need when crossing one of the nation's most dramatic landscapes.</p>
                     
                     <div class="quick-stats">
