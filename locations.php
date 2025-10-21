@@ -58,7 +58,7 @@
                 <p>Baker Basecamp is your gateway to unforgettable desert adventures</p>
             </div>
             <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8; margin-bottom: 1.5rem;">
+                <p style="font-size: 1.2rem; color: var(--fog-gray); line-height: 1.8; margin-bottom: 3rem;">
                     From Baker, explore Death Valley's otherworldly landscapes, witness sunrise at Zabriskie Point, or cruise the historic LA-Vegas corridor. Our location puts you at the heart of the Mojave Desert's most spectacular scenery.
                 </p>
             </div>
