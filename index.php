@@ -226,6 +226,15 @@
             </div>
         </div>
     </section>
+
+    <section class="podcast">
+        <div class="container">
+            <div class="section-header">
+                <h2>Listen to The Trail Marker Podcast</h2>
+                <iframe src="https://player.fireside.fm/v2/los7u-af/latest?theme=dark" width="740" height="200" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php include 'footer.php'; ?>
